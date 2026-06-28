@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#7c4dff">
-<title>Atividades na Creche — BNCC (1 a 3 anos)</title>
+<title>Atividades na Creche — BNCC (Berçário a Creche 3)</title>
 <style>
   :root{
     --roxo:#7c4dff; --roxo-esc:#5e35b1; --rosa:#ff6f91;
@@ -12,79 +11,32 @@
     --card:#ffffff; --texto:#2d2540; --cinza:#8a82a3;
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-  body{
-    font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-    background:var(--fundo);color:var(--texto);
-    line-height:1.5;padding-bottom:40px;
-  }
-  header{
-    background:linear-gradient(135deg,var(--roxo),var(--rosa));
-    color:#fff;padding:22px 18px 26px;text-align:center;
-    border-radius:0 0 26px 26px;box-shadow:0 6px 18px rgba(124,77,255,.25);
-  }
-  header h1{font-size:1.35rem;font-weight:700}
-  header p{font-size:.85rem;opacity:.92;margin-top:4px}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--fundo);color:var(--texto);line-height:1.5;padding-bottom:40px}
+  header{background:linear-gradient(135deg,var(--roxo),var(--rosa));color:#fff;padding:22px 18px 26px;text-align:center;border-radius:0 0 26px 26px;box-shadow:0 6px 18px rgba(124,77,255,.25)}
+  header h1{font-size:1.3rem;font-weight:700}
+  header p{font-size:.82rem;opacity:.92;margin-top:4px}
   .wrap{max-width:640px;margin:0 auto;padding:0 14px}
-
-  .filtros{
-    background:var(--card);border-radius:18px;padding:16px;
-    margin-top:-16px;box-shadow:0 4px 14px rgba(0,0,0,.06);
-    position:relative;z-index:2;
-  }
+  .filtros{background:var(--card);border-radius:18px;padding:16px;margin-top:-16px;box-shadow:0 4px 14px rgba(0,0,0,.06);position:relative;z-index:2}
   .campo-filtro{margin-bottom:12px}
   .campo-filtro:last-child{margin-bottom:0}
   label.tit{display:block;font-size:.8rem;font-weight:600;color:var(--cinza);margin-bottom:6px}
-  select{
-    width:100%;padding:12px;border:2px solid #ece6ff;border-radius:12px;
-    font-size:1rem;background:#faf8ff;color:var(--texto);appearance:none;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237c4dff' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");
-    background-repeat:no-repeat;background-position:right 14px center;
-  }
-  .switch{display:flex;align-items:center;justify-content:space-between;
-    background:#faf8ff;border:2px solid #ece6ff;border-radius:12px;padding:10px 14px;cursor:pointer}
-  .switch span{font-size:.95rem;font-weight:600}
-  .toggle{width:50px;height:28px;background:#d8d0f0;border-radius:20px;position:relative;transition:.2s;flex-shrink:0}
-  .toggle::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
-  .switch.on .toggle{background:var(--verde)}
-  .switch.on .toggle::after{left:25px}
-
+  select{width:100%;padding:12px;border:2px solid #ece6ff;border-radius:12px;font-size:1rem;background:#faf8ff;color:var(--texto);appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237c4dff' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center}
   .botoes{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-  button.acao{
-    flex:1;min-width:120px;border:none;border-radius:14px;padding:15px 10px;
-    font-size:1rem;font-weight:700;cursor:pointer;color:#fff;
-    box-shadow:0 4px 10px rgba(0,0,0,.12);transition:transform .08s;
-  }
+  button.acao{flex:1;min-width:120px;border:none;border-radius:14px;padding:15px 10px;font-size:1rem;font-weight:700;cursor:pointer;color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.12);transition:transform .08s}
   button.acao:active{transform:scale(.97)}
   .b-gerar{background:linear-gradient(135deg,var(--roxo),var(--roxo-esc));flex-basis:100%}
   .b-semana{background:var(--amarelo)}
   .b-fav{background:var(--rosa)}
   .b-surpresa{background:linear-gradient(135deg,#2bb673,#1f8f5a)}
   .b-nova{background:linear-gradient(135deg,#3d7eff,#2a5fd0)}
-
   .banner-sazonal{background:linear-gradient(135deg,#ffb300,#ff8f00);color:#fff;border-radius:14px;padding:13px 16px;margin-top:14px;font-size:.92rem;cursor:pointer;box-shadow:0 4px 10px rgba(255,143,0,.3);text-align:center}
-  .bloco.variacao{background:#eef9f3;border-left:4px solid var(--verde);border-radius:14px;padding:12px 14px}
-  .bloco.variacao h3{color:var(--verde)}
-
-  .overlay{display:none;position:fixed;inset:0;background:rgba(45,37,64,.55);z-index:50;padding:14px;overflow-y:auto}
-  .overlay.aberto{display:block}
-  .modal{background:#fff;max-width:560px;margin:10px auto 40px;border-radius:20px;padding:20px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
-  .modal h2{margin-bottom:6px;color:var(--roxo-esc)}
-  .modal .ajuda{font-size:.82rem;color:var(--cinza);margin-bottom:6px}
-  .tit2{display:block;font-size:.82rem;font-weight:600;color:var(--roxo-esc);margin:14px 0 5px}
-  .modal input,.modal select,.modal textarea{width:100%;padding:11px;border:2px solid #ece6ff;border-radius:12px;font-size:1rem;background:#faf8ff;font-family:inherit;color:var(--texto)}
-  .modal textarea{min-height:64px;resize:vertical}
-
   .resultado{margin-top:18px}
-  .card{
-    background:var(--card);border-radius:20px;padding:20px;margin-bottom:16px;
-    box-shadow:0 4px 16px rgba(0,0,0,.07);border-top:6px solid var(--roxo);
-    animation:sobe .3s ease;
-  }
+  .card{background:var(--card);border-radius:20px;padding:20px;margin-bottom:16px;box-shadow:0 4px 16px rgba(0,0,0,.07);border-top:6px solid var(--roxo);animation:sobe .3s ease}
   @keyframes sobe{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
   .card h2{font-size:1.3rem;margin-bottom:4px}
   .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
   .tag{font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:20px;background:#efe9ff;color:var(--roxo-esc)}
-  .tag.idade{background:#e3f7ee;color:var(--verde)}
+  .tag.turma{background:#e9f0ff;color:#2a5fd0}
   .tag.data{background:#fff3d6;color:#b07800}
   .tag.custo-gratis{background:#e3f7ee;color:var(--verde)}
   .tag.custo-baixo{background:#fff0e6;color:#d2691e}
@@ -93,31 +45,47 @@
   .bloco p,.bloco li{font-size:.95rem}
   .bloco ul,.bloco ol{padding-left:20px}
   .bloco li{margin-bottom:3px}
-  .tea{background:#fff5f8;border-radius:14px;padding:12px 14px;border-left:4px solid var(--rosa)}
-  .tea h3{color:var(--rosa)}
+  .bloco.variacao{background:#eef9f3;border-left:4px solid var(--verde);border-radius:14px;padding:12px 14px}
+  .bloco.variacao h3{color:var(--verde)}
+  .adapt{border-radius:14px;padding:12px 14px}
+  .adapt-tea{background:#fff5f8;border-left:4px solid var(--rosa)}
+  .adapt-tea h3{color:var(--rosa)}
+  .adapt-tdah{background:#fff8e8;border-left:4px solid var(--amarelo)}
+  .adapt-tdah h3{color:#b07800}
+  .adapt-altas{background:#eef9f3;border-left:4px solid var(--verde)}
+  .adapt-altas h3{color:var(--verde)}
   .card-acoes{display:flex;gap:10px;margin-top:8px}
   .mini{flex:1;border:2px solid #ece6ff;background:#faf8ff;border-radius:12px;padding:10px;font-size:.9rem;font-weight:600;color:var(--roxo-esc);cursor:pointer}
   .mini:active{background:#efe9ff}
   .dia-titulo{font-weight:700;color:var(--roxo);font-size:1rem;margin:6px 2px}
   .vazio{text-align:center;color:var(--cinza);padding:30px 10px;font-size:.95rem}
   footer{text-align:center;font-size:.75rem;color:var(--cinza);margin-top:24px;padding:0 20px}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(45,37,64,.55);z-index:50;padding:14px;overflow-y:auto}
+  .overlay.aberto{display:block}
+  .modal{background:#fff;max-width:560px;margin:10px auto 40px;border-radius:20px;padding:20px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+  .modal h2{margin-bottom:6px;color:var(--roxo-esc)}
+  .modal .ajuda{font-size:.82rem;color:var(--cinza);margin-bottom:6px}
+  .tit2{display:block;font-size:.82rem;font-weight:600;color:var(--roxo-esc);margin:14px 0 5px}
+  .modal input,.modal select,.modal textarea{width:100%;padding:11px;border:2px solid #ece6ff;border-radius:12px;font-size:1rem;background:#faf8ff;font-family:inherit;color:var(--texto)}
+  .modal textarea{min-height:64px;resize:vertical}
 </style>
 </head>
 <body>
 <header>
   <h1>🧸 Atividades na Creche</h1>
-  <p>Educação Infantil · 1 a 3 anos · alinhado à BNCC</p>
+  <p>Berçário · Creche 1, 2 e 3 · BNCC · com adaptações TEA, TDAH e Altas Habilidades</p>
 </header>
 
 <div class="wrap">
   <div class="filtros">
     <div class="campo-filtro">
-      <label class="tit" for="fIdade">Faixa etária</label>
-      <select id="fIdade" title="Faixa etária">
-        <option value="todas">Qualquer idade (1 a 3)</option>
-        <option value="1">1 ano</option>
-        <option value="2">2 anos</option>
-        <option value="3">3 anos</option>
+      <label class="tit" for="fTurma">Turma</label>
+      <select id="fTurma" title="Turma">
+        <option value="todas">Todas as turmas</option>
+        <option value="bercario">🍼 Berçário (bebês)</option>
+        <option value="creche1">Creche 1 (~1 ano)</option>
+        <option value="creche2">Creche 2 (~2 anos)</option>
+        <option value="creche3">Creche 3 (~3 anos)</option>
       </select>
     </div>
     <div class="campo-filtro">
@@ -148,10 +116,13 @@
       </select>
     </div>
     <div class="campo-filtro">
-      <div class="switch" id="swTea" onclick="toggleTea()">
-        <span>♿ Mostrar adaptação para TEA</span>
-        <div class="toggle"></div>
-      </div>
+      <label class="tit" for="fPerfil">👁️ Mostrar adaptação para</label>
+      <select id="fPerfil" title="Perfil de adaptação">
+        <option value="tipico">Criança típica (sem adaptação)</option>
+        <option value="tea">🧩 TEA (Autismo)</option>
+        <option value="tdah">⚡ TDAH</option>
+        <option value="altas">🌟 Altas Habilidades / Superdotação</option>
+      </select>
     </div>
     <div class="botoes">
       <button type="button" class="acao b-gerar" onclick="gerar()">✨ Gerar atividade</button>
@@ -163,33 +134,27 @@
   </div>
 
   <div id="banner"></div>
+  <div class="resultado" id="resultado"></div>
 
-  <div class="resultado" id="resultado">
-    <div class="vazio">👆 Escolha os filtros e toque em <b>Gerar atividade</b>.</div>
-  </div>
-
-  <footer>Feito com carinho para auxiliares de creche 💜<br>Funciona sem internet. As atividades são sugestões — sempre alinhe com a coordenação pedagógica.</footer>
+  <footer>Feito com carinho para auxiliares de creche 💜<br>Funciona sem internet. As atividades são sugestões — sempre alinhe com a coordenação pedagógica e o AEE.</footer>
 </div>
 
 <div class="overlay" id="overlay" onclick="if(event.target===this)fecharForm()">
   <div class="modal">
     <h2>➕ Nova atividade</h2>
-    <p class="ajuda">Preencha o que quiser. Só o nome é obrigatório. Ela fica salva no seu celular e entra nos sorteios.</p>
-
+    <p class="ajuda">Preencha o que quiser. Só o nome é obrigatório. Ela fica salva no seu aparelho e entra nos sorteios.</p>
     <label class="tit2" for="nNome">Nome da atividade *</label>
     <input id="nNome" placeholder="Ex.: Pintura com bucha vegetal">
-
     <label class="tit2" for="nEmoji">Emoji (opcional)</label>
     <input id="nEmoji" placeholder="🌟" maxlength="3">
-
-    <label class="tit2" for="nIdade">Faixa etária</label>
-    <select id="nIdade" title="Faixa etária">
-      <option value="todas">Qualquer idade (1 a 3)</option>
-      <option value="1">1 ano</option>
-      <option value="2">2 anos</option>
-      <option value="3">3 anos</option>
+    <label class="tit2" for="nTurma">Turma</label>
+    <select id="nTurma" title="Turma">
+      <option value="todas">Todas as turmas</option>
+      <option value="bercario">🍼 Berçário (bebês)</option>
+      <option value="creche1">Creche 1 (~1 ano)</option>
+      <option value="creche2">Creche 2 (~2 anos)</option>
+      <option value="creche3">Creche 3 (~3 anos)</option>
     </select>
-
     <label class="tit2" for="nCampo">Campo de experiência (BNCC)</label>
     <select id="nCampo" title="Campo de experiência">
       <option value="eu">O eu, o outro e o nós</option>
@@ -198,25 +163,23 @@
       <option value="escuta">Escuta, fala, pensamento e imaginação</option>
       <option value="espacos">Espaços, tempos, quantidades…</option>
     </select>
-
     <label class="tit2" for="nCusto">Custo</label>
     <select id="nCusto" title="Custo">
       <option value="gratis">🆓 Sem custo / reaproveitável</option>
       <option value="baixo">💲 Baixo custo</option>
     </select>
-
     <label class="tit2" for="nBncc">O que trabalha na criança (opcional)</label>
     <textarea id="nBncc" placeholder="Ex.: coordenação motora fina, exploração de texturas..."></textarea>
-
     <label class="tit2" for="nMat">Materiais — um por linha</label>
     <textarea id="nMat" placeholder="Bucha vegetal&#10;Tinta guache&#10;Papel"></textarea>
-
     <label class="tit2" for="nPassos">Passo a passo — um por linha</label>
     <textarea id="nPassos" placeholder="Molhe a bucha na tinta&#10;A criança carimba no papel"></textarea>
-
-    <label class="tit2" for="nTea">Adaptação para TEA — um por linha (opcional)</label>
+    <label class="tit2" for="nTea">Adaptação TEA — um por linha (opcional)</label>
     <textarea id="nTea" placeholder="Fazer um de cada vez, em local calmo"></textarea>
-
+    <label class="tit2" for="nTdah">Adaptação TDAH — um por linha (opcional)</label>
+    <textarea id="nTdah" placeholder="Tarefa curta, com movimento"></textarea>
+    <label class="tit2" for="nAltas">Adaptação Altas Habilidades — um por linha (opcional)</label>
+    <textarea id="nAltas" placeholder="Propor um desafio a mais"></textarea>
     <div class="botoes">
       <button type="button" class="acao b-fav" onclick="fecharForm()">Cancelar</button>
       <button type="button" class="acao b-gerar" onclick="salvarNova()">💾 Salvar</button>
@@ -225,258 +188,56 @@
 </div>
 
 <script>
-/* ====== BIBLIOTECA DE ATIVIDADES ======
-   idades: quais faixas servem (1,2,3)
-   campo: eu | corpo | tracos | escuta | espacos
-*/
 const ATIVIDADES = [
-  {nome:"Pintura com os dedos",emoji:"🎨",campo:"tracos",idades:[1,2,3],
-   bncc:"Explora cores e texturas, desenvolve a coordenação motora fina e a expressão por meio da arte.",
-   materiais:["Tinta guache lavável (ou tinta de maisena caseira)","Papel grande ou papelão","Avental ou camiseta velha"],
-   passos:["Forre o chão ou a mesa.","Coloque um pouco de tinta no papel.","Deixe a criança espalhar com os dedos e as mãos livremente.","Converse sobre as cores que aparecem."],
-   tea:["Ofereça um pincel ou rolinho se a criança não gostar da tinta na mão.","Faça em um cantinho mais calmo e um de cada vez.","Tenha um paninho úmido por perto para limpar logo (alívio sensorial)."]},
-
-  {nome:"Garrafas sensoriais",emoji:"🍾",campo:"espacos",idades:[1,2,3],
-   bncc:"Observa transformações, causa e efeito (chacoalhar = movimento), e explora luz, cor e som.",
-   materiais:["Garrafa PET pequena com tampa","Água","Glitter, miçangas ou gel de cabelo","Cola quente na tampa (segurança)"],
-   passos:["Encha a garrafa com água e os itens.","Feche bem e cole a tampa.","Deixe a criança chacoalhar e observar os objetos se mexendo."],
-   tea:["Ótima para autorregulação: ajuda a acalmar.","Faça versões com poucos itens (menos estímulo visual).","Deixe disponível no cantinho da calma."]},
-
-  {nome:"Circuito de movimento",emoji:"🤸",campo:"corpo",idades:[1,2,3],
-   bncc:"Desenvolve equilíbrio, força, noção de espaço e coordenação dos grandes movimentos.",
-   materiais:["Almofadas","Fita crepe no chão","Caixa de papelão grande (túnel)","Cadeiras"],
-   passos:["Monte um caminho: passar por cima de almofadas, andar na linha da fita, passar pelo túnel.","Mostre primeiro como faz.","Deixe cada criança fazer no seu ritmo."],
-   tea:["Mostre o percurso com fotos antes de começar (antecipação).","Permita repetir a mesma parte quantas vezes quiser.","Não force; convide com calma."]},
-
-  {nome:"Massinha caseira",emoji:"🟡",campo:"tracos",idades:[1,2,3],
-   bncc:"Fortalece a musculatura das mãos, estimula criatividade e exploração de formas.",
-   materiais:["2 xícaras de farinha","1/2 xícara de sal","1 colher de óleo","Água aos poucos","Corante alimentício (opcional)"],
-   passos:["Misture tudo até virar massa.","Divida pedaços para cada criança.","Deixe amassar, apertar, rolar e fazer bolinhas."],
-   tea:["Se não gostar da textura, ofereça em saquinho plástico fechado para apertar.","Comece com pouco tempo de contato.","Evite cheiro forte de corante."]},
-
-  {nome:"Hora da história com fantoches",emoji:"📖",campo:"escuta",idades:[1,2,3],
-   bncc:"Amplia vocabulário, atenção, escuta e imaginação por meio da narrativa.",
-   materiais:["Livro cartonado ou de pano","Fantoche ou bicho de pelúcia","Cantinho com almofadas"],
-   passos:["Reúna as crianças na roda.","Conte a história fazendo vozes e sons.","Use o fantoche para chamar a atenção.","Deixe-as tocar o livro e repetir sons."],
-   tea:["Sente a criança onde ela se sentir confortável (não force a roda).","Use histórias curtas e repetitivas.","Apoie com imagens grandes."]},
-
-  {nome:"Música do bom dia com nomes",emoji:"🎶",campo:"eu",idades:[1,2,3],
-   bncc:"Constrói identidade e pertencimento ao reconhecer o próprio nome e o dos colegas.",
-   materiais:["Apenas a voz","Opcional: chocalho ou palmas"],
-   passos:["Cante uma música simples de bom dia.","Cante o nome de cada criança, uma por vez.","Incentive todos a baterem palma quando ouvirem o nome do colega."],
-   tea:["Mantenha a mesma música todos os dias (rotina previsível).","Não exija resposta verbal; um olhar ou gesto já vale.","Volume de voz suave."]},
-
-  {nome:"Brincadeira do espelho",emoji:"🪞",campo:"eu",idades:[1,2,3],
-   bncc:"Favorece o autoconhecimento, o reconhecimento da própria imagem e das emoções.",
-   materiais:["Espelho (de parede ou inquebrável)"],
-   passos:["Leve a criança ao espelho.","Faça caretas, sorria, mostre as partes do rosto.","Nomeie: 'olho, boca, cabelo'.","Deixe ela se observar."],
-   tea:["Atividade individual costuma funcionar melhor.","Respeite se ela não quiser olhar; deixe explorar sozinha.","Sem pressa."]},
-
-  {nome:"Bacia de água e potinhos",emoji:"💧",campo:"espacos",idades:[1,2,3],
-   bncc:"Explora quantidade (cheio/vazio), transferência e propriedades da água.",
-   materiais:["Bacia com pouca água","Copinhos e potes de tamanhos diferentes","Toalha no chão"],
-   passos:["Coloque a bacia com pouca água.","Dê potinhos para encher e esvaziar.","Fale: 'encheu!', 'esvaziou!'.","Supervisione sempre."],
-   tea:["Água morna costuma acalmar.","Comece com pouca água se houver receio.","Sempre com supervisão de perto."]},
-
-  {nome:"Separar por cor",emoji:"🔴",campo:"espacos",idades:[2,3],
-   bncc:"Desenvolve classificação, atenção e reconhecimento de cores (raciocínio lógico inicial).",
-   materiais:["Tampinhas ou bolinhas coloridas","2 ou 3 potes das mesmas cores"],
-   passos:["Mostre como colocar a tampinha vermelha no pote vermelho.","Deixe a criança separar.","Comemore cada acerto, sem cobrar perfeição."],
-   tea:["Comece com apenas 2 cores bem diferentes.","Dê um comando por vez ('põe a vermelha aqui').","Use modelo visual ao lado."]},
-
-  {nome:"Dança das partes do corpo",emoji:"💃",campo:"corpo",idades:[1,2,3],
-   bncc:"Reconhece e nomeia partes do corpo, desenvolve ritmo e consciência corporal.",
-   materiais:["Música animada","Espaço livre"],
-   passos:["Coloque uma música.","Peça para mexer: 'mexe a mão!', 'mexe o pé!'.","Mostre os movimentos para imitarem."],
-   tea:["Diminua o volume se ela tapar os ouvidos.","Permita participar de longe, só observando no início.","Movimentos lentos e claros."]},
-
-  {nome:"Caixa surpresa",emoji:"🎁",campo:"escuta",idades:[1,2,3],
-   bncc:"Amplia vocabulário e curiosidade ao nomear e descobrir objetos do cotidiano.",
-   materiais:["Uma caixa","Objetos variados e seguros (bola, colher, bicho de pelúcia)"],
-   passos:["Esconda os objetos na caixa.","A criança tira um por vez.","Nomeie cada objeto: 'é a bola!'.","Pergunte o que é e para que serve."],
-   tea:["Use objetos do interesse dela para engajar.","Poucos objetos por vez.","Nomeie sempre com a mesma palavra."]},
-
-  {nome:"Carimbo com esponja",emoji:"🧽",campo:"tracos",idades:[1,2,3],
-   bncc:"Explora formas, texturas e cores; desenvolve a expressão artística e a preensão.",
-   materiais:["Pedaços de esponja","Tinta guache","Papel"],
-   passos:["Molhe a esponja na tinta.","A criança carimba no papel.","Observe as marcas e formas que aparecem."],
-   tea:["A esponja evita contato direto com a tinta (bom para sensibilidade ao toque).","Um de cada vez, em local tranquilo."]},
-
-  {nome:"Empilhar e derrubar",emoji:"🧱",campo:"espacos",idades:[1,2,3],
-   bncc:"Trabalha noção de altura, equilíbrio, causa e efeito e coordenação.",
-   materiais:["Copos plásticos ou caixinhas","Blocos de montar grandes"],
-   passos:["Empilhe junto com a criança.","Deixe ela derrubar (eles amam!).","Conte enquanto empilha: 'um, dois, três'."],
-   tea:["A repetição (empilhar/derrubar) é acolhedora e previsível.","Deixe repetir à vontade.","Ótima atividade individual."]},
-
-  {nome:"Túnel de engatinhar",emoji:"🚇",campo:"corpo",idades:[1,2],
-   bncc:"Estimula a coordenação dos grandes movimentos e a exploração do espaço.",
-   materiais:["Caixas de papelão grandes abertas nas pontas","Cadeiras com lençol por cima"],
-   passos:["Monte o túnel.","Mostre passando primeiro.","Convide a criança a atravessar engatinhando."],
-   tea:["Deixe ela observar antes de entrar.","Túnel curto no começo (menos sensação de fechado).","Nunca force a entrar."]},
-
-  {nome:"Cantigas com gestos",emoji:"🤲",campo:"escuta",idades:[1,2,3],
-   bncc:"Desenvolve linguagem, memória, ritmo e coordenação ao associar gesto e palavra.",
-   materiais:["Apenas voz e mãos (ex.: 'A Dona Aranha', 'Cabeça, ombro, joelho e pé')"],
-   passos:["Cante fazendo os gestos.","Repita várias vezes.","Incentive as crianças a imitarem os gestos."],
-   tea:["Use sempre as mesmas músicas (previsibilidade).","Gestos lentos e bem marcados.","Aceite imitação parcial ou só observação."]},
-
-  {nome:"Cesto dos tesouros",emoji:"🧺",campo:"espacos",idades:[1],
-   bncc:"Estimula a exploração sensorial livre e a descoberta de materiais (BNCC para bem pequenos).",
-   materiais:["Cesto","Objetos naturais e do cotidiano: colher de pau, escova, pinha, tecido, pote"],
-   passos:["Coloque os objetos no cesto.","Deixe o bebê explorar livremente, pegando e largando.","Apenas observe e nomeie o que ele pega."],
-   tea:["Selecione objetos com texturas variadas e seguras.","Reduza a quantidade para não sobrecarregar.","Deixe explorar no tempo dele."]},
-
-  {nome:"Brincadeira de faz de conta (cozinha)",emoji:"🍳",campo:"escuta",idades:[2,3],
-   bncc:"Desenvolve imaginação, linguagem e representação de papéis sociais.",
-   materiais:["Panelinhas, potes, colheres de plástico","Alimentos de brinquedo ou tampinhas"],
-   passos:["Monte uma 'cozinha'.","Brinque de fazer comida junto.","Pergunte: 'o que você está cozinhando?'."],
-   tea:["Mostre como brincar (modelo), pois o faz de conta pode ser difícil.","Aceite o brincar do jeito dela (ex.: organizar os potes).","Sem cobrança de 'história'."]},
-
-  {nome:"Pintura com gelo colorido",emoji:"🧊",campo:"tracos",idades:[2,3],
-   bncc:"Explora transformações (gelo derretendo), temperatura, cor e causa e efeito.",
-   materiais:["Forminhas de gelo","Água com corante","Palitos de sorvete","Papel"],
-   passos:["Congele a água colorida com um palito (vira 'giz de gelo').","A criança desliza o gelo no papel.","Observem o gelo derreter e pintar."],
-   tea:["A sensação de frio pode incomodar — ofereça por pouco tempo.","Deixe observar antes de tocar.","Tenha toalha à mão."]},
-
-  {nome:"Rolar a bola para o amigo",emoji:"⚽",campo:"eu",idades:[1,2,3],
-   bncc:"Desenvolve interação, espera da vez e convivência com o outro.",
-   materiais:["Uma bola macia"],
-   passos:["Sentem-se em frente um ao outro.","Role a bola para a criança.","Incentive a rolar de volta.","Vá incluindo mais crianças."],
-   tea:["Comece só você e a criança, sem grupo.","Antecipe: 'agora vai pra você'.","Aceite outras formas de devolver a bola."]},
-
-  {nome:"Texturas para tocar",emoji:"✋",campo:"espacos",idades:[1,2,3],
-   bncc:"Estimula a percepção tátil e a exploração das características dos materiais.",
-   materiais:["Pedaços de tecidos diferentes (liso, áspero, fofo)","Algodão, lixa fina, veludo"],
-   passos:["Cole as texturas em um papelão ou painel.","Deixe a criança tocar.","Diga: 'esse é macio', 'esse é áspero'."],
-   tea:["Deixe ela escolher o que quer tocar; respeite recusas.","Apresente uma textura por vez.","Ótima para conhecer sensibilidades dela."]},
-
-  {nome:"Boliche de garrafas",emoji:"🎳",campo:"corpo",idades:[2,3],
-   bncc:"Desenvolve coordenação, força, mira e noção de causa e efeito.",
-   materiais:["Garrafas PET vazias","Uma bola"],
-   passos:["Enfileire as garrafas.","A criança rola a bola para derrubar.","Comemorem juntos as quedas."],
-   tea:["A queda previsível costuma agradar.","Permita repetir bastante.","Reduza o número de garrafas se houver muito barulho."]},
-
-  {nome:"Roda de cheiros",emoji:"👃",campo:"espacos",idades:[2,3],
-   bncc:"Explora o sentido do olfato e amplia o vocabulário sobre o mundo.",
-   materiais:["Potinhos com algodão e cheiros suaves (canela, laranja, café)"],
-   passos:["Ofereça cada potinho para cheirar.","Nomeie o cheiro.","Pergunte se é gostoso ou não."],
-   tea:["Cuidado: olfato pode ser muito sensível — cheiros bem suaves e poucos.","Deixe recusar.","Observe reações."]},
-
-  {nome:"Cantinho da calma",emoji:"🧘",campo:"eu",idades:[1,2,3],
-   bncc:"Apoia o autoconhecimento, a regulação das emoções e o bem-estar.",
-   materiais:["Almofadas","Bicho de pelúcia","Garrafa sensorial","Iluminação suave"],
-   passos:["Crie um canto aconchegante e tranquilo.","Leve a criança quando estiver agitada.","Deixe-a se acalmar com os objetos."],
-   tea:["Essencial para crianças com suspeita de TEA: lugar de refúgio sensorial.","Sem estímulos fortes.","Disponível sempre que ela precisar."]},
-
-  /* ====== DATAS COMEMORATIVAS ====== */
-
-  {nome:"Maracá de Carnaval",emoji:"🪇",campo:"corpo",idades:[1,2,3],data:"Carnaval",custo:"gratis",
-   bncc:"Explora ritmo, som e movimento; desenvolve coordenação ao chacoalhar no compasso da música.",
-   materiais:["Garrafa PET pequena ou lata vazia","Punhado de feijão, arroz ou tampinhas","Fita adesiva para fechar bem"],
-   passos:["Coloque os grãos dentro da garrafa e feche bem com fita.","Coloque uma música de Carnaval.","As crianças chacoalham e dançam."],
-   tea:["Comece com volume baixo; aumente aos poucos.","Deixe segurar e explorar antes de tocar junto.","Permita só observar se preferir."]},
-
-  {nome:"Máscara de Carnaval",emoji:"🎭",campo:"tracos",idades:[2,3],data:"Carnaval",custo:"baixo",
-   bncc:"Desenvolve criatividade, identidade e coordenação ao enfeitar e usar a própria máscara.",
-   materiais:["Prato de papel ou papelão de caixa","Lápis de cor ou tinta","Palito de picolé (cabo)","Tesoura (uso do adulto)"],
-   passos:["O adulto recorta os buracos dos olhos.","A criança pinta e enfeita.","Cole o palito como cabo para segurar no rosto."],
-   tea:["Não force colocar no rosto; pode só segurar ou enfeitar.","Evite enfeites que coçam.","Mostre no espelho com calma."]},
-
-  {nome:"Chuva de papel picado",emoji:"🎊",campo:"corpo",idades:[1,2,3],data:"Carnaval",custo:"gratis",
-   bncc:"Estimula movimentos amplos, alegria e percepção do corpo no espaço.",
-   materiais:["Jornal ou papel velho picado em pedacinhos"],
-   passos:["Pique o papel junto com as crianças (coordenação).","Joguem o papel para o alto como confete.","Depois, brinquem de juntar tudo de volta."],
-   tea:["Alguns podem se incomodar com o papel caindo no rosto — jogue mais baixo.","Atividade de juntar costuma acalmar.","Deixe participar à distância."]},
-
-  {nome:"Caça aos ovinhos",emoji:"🥚",campo:"espacos",idades:[1,2,3],data:"Páscoa",custo:"gratis",
-   bncc:"Desenvolve atenção, busca, noção de espaço e a alegria da descoberta.",
-   materiais:["Bolinhas de papel amassado (ou ovos de plástico, se tiver)","Cestinha ou pote"],
-   passos:["Esconda os 'ovinhos' pela sala, à vista.","As crianças procuram e colocam na cestinha.","Comemore cada achado."],
-   tea:["Esconda à vista para não gerar frustração.","Mostre um exemplo primeiro.","Sem disputa: cada um no seu tempo."]},
-
-  {nome:"Orelhas de coelho",emoji:"🐰",campo:"tracos",idades:[1,2,3],data:"Páscoa",custo:"gratis",
-   bncc:"Trabalha identidade, faz de conta e reconhecimento do próprio corpo.",
-   materiais:["Tira de papelão ou papel resistente para a cabeça","Papel para as orelhas","Cola ou grampeador (adulto)"],
-   passos:["Monte a tira na medida da cabeça.","A criança ajuda a colar as orelhas.","Brinquem de pular como coelhinho."],
-   tea:["Não force usar na cabeça; pode segurar na mão.","Material macio, sem apertar.","Mostre no espelho sem pressa."]},
-
-  {nome:"Cocar colorido",emoji:"🪶",campo:"tracos",idades:[2,3],data:"Dia dos Povos Indígenas",custo:"gratis",
-   bncc:"Valoriza a cultura dos povos indígenas e desenvolve a expressão artística e a identidade.",
-   materiais:["Tira de papelão (reaproveitado)","Papel colorido cortado em forma de penas","Lápis de cor ou tinta"],
-   passos:["Converse de forma simples sobre os povos indígenas.","A criança pinta e cola as 'penas'.","Monte o cocar na cabecinha dela."],
-   tea:["Ofereça poucas cores para não sobrecarregar.","Deixe usar ou só segurar.","Fale de forma curta e tranquila."]},
-
-  {nome:"Pintura no braço (povos indígenas)",emoji:"🎨",campo:"tracos",idades:[2,3],data:"Dia dos Povos Indígenas",custo:"baixo",
-   bncc:"Explora a cultura indígena, a expressão corporal e a sensação tátil da tinta na pele.",
-   materiais:["Tinta guache lavável","Pincel ou dedo"],
-   passos:["Faça desenhos simples (pontos, linhas) no braço da criança.","Mostre antes no seu próprio braço.","Deixe ela escolher se quer."],
-   tea:["MUITO importante respeitar: tinta na pele pode incomodar.","Ofereça pintar um papel em vez do braço.","Pano úmido por perto para limpar."]},
-
-  {nome:"Cartão com a mãozinha",emoji:"💐",campo:"eu",idades:[1,2,3],data:"Dia das Mães",custo:"baixo",
-   bncc:"Desenvolve vínculo afetivo, identidade e a expressão artística como presente afetivo.",
-   materiais:["Papel ou papelão dobrado","Tinta guache","Opcional: papel colorido para enfeitar"],
-   passos:["Passe tinta na mãozinha da criança.","Carimbe no papel (vira flor ou coração).","Escreva uma mensagem carinhosa."],
-   tea:["Se não gostar de tinta na mão, use carimbo de esponja ou desenho.","Faça individualmente, com calma."]},
-
-  {nome:"Bandeirinhas juninas",emoji:"🎐",campo:"tracos",idades:[2,3],data:"Festa Junina",custo:"gratis",
-   bncc:"Trabalha cores, coordenação motora fina e a cultura das festas populares.",
-   materiais:["Papel colorido reaproveitado (revistas, encartes)","Barbante","Cola"],
-   passos:["Recorte triângulos (adulto).","A criança cola os triângulos no barbante.","Pendurem para enfeitar a sala."],
-   tea:["Dê pedaços já prontos para colar.","Ambiente sem música muito alta.","Um passo por vez."]},
-
-  {nome:"Pescaria junina",emoji:"🎣",campo:"espacos",idades:[2,3],data:"Festa Junina",custo:"gratis",
-   bncc:"Desenvolve coordenação olho-mão, mira, espera da vez e noção de quantidade.",
-   materiais:["Peixinhos de papelão com um clipe","Vara: cabo de vassoura ou palito com barbante e um ímã (ou ganchinho)"],
-   passos:["Espalhe os peixinhos no chão.","A criança 'pesca' com a varinha.","Contem juntos quantos pescou."],
-   tea:["Use vara curta, mais fácil de controlar.","Comece com poucos peixes.","Comemore qualquer tentativa."]},
-
-  {nome:"Quadrilha dos pequenos",emoji:"🤠",campo:"corpo",idades:[1,2,3],data:"Festa Junina",custo:"gratis",
-   bncc:"Desenvolve ritmo, coordenação, lateralidade e convivência em grupo.",
-   materiais:["Música de quadrilha"],
-   passos:["Façam uma roda.","Movimentos simples: rodar, bater palma, 'olha a chuva!'.","Deixe cada um no seu ritmo."],
-   tea:["Diminua o volume se necessário.","Participar de fora também vale.","Movimentos lentos e repetidos."]},
-
-  {nome:"Medalha para o papai",emoji:"🏅",campo:"eu",idades:[1,2,3],data:"Dia dos Pais",custo:"gratis",
-   bncc:"Fortalece o vínculo afetivo e a identidade ao criar um presente para a família.",
-   materiais:["Tampa de pote ou círculo de papelão","Barbante ou fita","Lápis de cor"],
-   passos:["A criança pinta a 'medalha'.","Faça um furo e passe o barbante.","Escreva 'Melhor Papai'."],
-   tea:["Material leve, sem apertar no pescoço.","Aceite o jeito dela de pintar.","Atividade individual."]},
-
-  {nome:"Saci e o folclore",emoji:"👣",campo:"escuta",idades:[2,3],data:"Folclore",custo:"gratis",
-   bncc:"Amplia imaginação, linguagem e o contato com a cultura popular brasileira.",
-   materiais:["Apenas a voz (conte a lenda do Saci de forma simples e alegre)","Opcional: fantoche de meia"],
-   passos:["Conte a história do Saci pulando numa perna só.","Imitem o Saci pulando.","Façam sons e brincadeiras."],
-   tea:["História curta e repetitiva.","Não force pular; pode só assistir.","Apoie com imagem do personagem."]},
-
-  {nome:"Plantar feijão no algodão",emoji:"🌱",campo:"espacos",idades:[2,3],data:"Primavera / Dia da Árvore",custo:"baixo",
-   bncc:"Observa transformações da natureza, o tempo e o cuidado com a vida (germinação).",
-   materiais:["Copo plástico reaproveitado","Algodão","Grão de feijão","Água"],
-   passos:["Coloque o algodão úmido no copo.","A criança põe o feijão.","Acompanhem o feijão crescer nos próximos dias."],
-   tea:["A rotina de regar todo dia é ótima (previsível).","Deixe tocar o algodão e o feijão.","Acompanhe o interesse dela."]},
-
-  {nome:"Colagem da natureza",emoji:"🍂",campo:"tracos",idades:[1,2,3],data:"Primavera / Dia da Árvore",custo:"gratis",
-   bncc:"Explora texturas, cores e elementos naturais; desenvolve percepção e criatividade.",
-   materiais:["Folhas secas, gravetos, pétalas (coletados no pátio)","Papel","Cola"],
-   passos:["Façam um passeio para juntar folhinhas.","A criança cola no papel livremente.","Conversem sobre o que encontraram."],
-   tea:["Deixe escolher os elementos que quiser tocar.","Algumas texturas podem incomodar — respeite.","Passeio curto e tranquilo."]},
-
-  {nome:"Imitando os bichos",emoji:"🐶",campo:"corpo",idades:[1,2,3],data:"Dia dos Animais",custo:"gratis",
-   bncc:"Desenvolve expressão corporal, linguagem (sons) e imaginação ao representar animais.",
-   materiais:["Apenas o corpo e a voz","Opcional: figuras de animais"],
-   passos:["Mostre um animal e seu som ('o cachorro faz au-au').","Imitem juntos: pular como sapo, andar como gato.","Deixe cada criança escolher um bicho."],
-   tea:["Use os animais de interesse dela.","Sons suaves, sem susto.","Imitar de longe também vale."]},
-
-  {nome:"Bichinho de rolinho",emoji:"🦋",campo:"tracos",idades:[2,3],data:"Dia dos Animais",custo:"gratis",
-   bncc:"Desenvolve criatividade e coordenação motora fina ao transformar sucata em bichinho.",
-   materiais:["Rolo de papel higiênico vazio","Lápis de cor ou tinta","Papel para asas/orelhas","Cola"],
-   passos:["A criança pinta o rolinho.","Colem asas, orelhas ou olhos de papel.","Brinquem com o bichinho criado."],
-   tea:["Dê as partes prontas para colar.","Poucas etapas por vez.","Aceite o resultado do jeito dela."]},
-
-  {nome:"Árvore de Natal de mãozinhas",emoji:"🎄",campo:"tracos",idades:[1,2,3],data:"Natal",custo:"baixo",
-   bncc:"Trabalha identidade, cores e o sentido de pertencimento em uma produção coletiva.",
-   materiais:["Tinta verde","Papel grande (cartaz coletivo)","Opcional: papel colorido para enfeites"],
-   passos:["Carimbe a mãozinha verde de cada criança formando uma árvore.","Colem 'enfeites' de papel.","Pendurem o cartaz na sala."],
-   tea:["Se não gostar de tinta, recorte a mãozinha em papel e cole.","Faça uma criança por vez.","Pano úmido por perto."]},
+  {"nome":"Pintura com os dedos","emoji":"🎨","campo":"tracos","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"baixo","bncc":"Explora cores e texturas, desenvolve a coordenação motora fina e a expressão por meio da arte.","materiais":["Tinta guache lavável (ou tinta de maisena caseira)","Papel grande ou papelão","Avental ou camiseta velha"],"passos":["Forre o chão ou a mesa.","Coloque um pouco de tinta no papel.","Deixe a criança espalhar com os dedos e as mãos livremente.","Converse sobre as cores que aparecem."],"adapt":{"tea":["Ofereça um pincel ou rolinho se a criança não gostar da tinta na mão.","Faça em um cantinho mais calmo e um de cada vez.","Tenha um paninho úmido por perto para limpar logo (alívio sensorial)."],"tdah":["Use uma folha bem grande para ela pintar em pé e gastar energia.","Tarefa curta: pinte uma cor por vez, com pausa para olhar.","Forre tudo antes para não precisar interromper e brigar."],"altas":["Proponha misturar duas cores e perguntar que cor nova nasceu.","Desafie a desenhar uma forma ou história com os dedos.","Pergunte: 'o que você está pintando? Me conta!' para ampliar a fala."]}},
+  {"nome":"Garrafas sensoriais","emoji":"🍾","campo":"espacos","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"baixo","bncc":"Observa transformações, causa e efeito (chacoalhar = movimento), e explora luz, cor e som.","materiais":["Garrafa PET pequena com tampa","Água","Glitter, miçangas ou gel de cabelo","Cola quente na tampa (segurança)"],"passos":["Encha a garrafa com água e os itens.","Feche bem e cole a tampa.","Deixe a criança chacoalhar e observar os objetos se mexendo."],"adapt":{"tea":["Ótima para autorregulação: ajuda a acalmar.","Faça versões com poucos itens (menos estímulo visual).","Deixe disponível no cantinho da calma."],"tdah":["Use como pausa calmante quando ela estiver muito agitada.","Deixe chacoalhar com força e depois observar parar (gasta energia).","Tenha sempre uma à mão para acalmar em segundos."],"altas":["Faça duas garrafas e pergunte qual desce mais rápido.","Deixe ela ajudar a montar e escolher o que vai dentro.","Pergunte por que os itens sobem e descem para instigar."]}},
+  {"nome":"Circuito de movimento","emoji":"🤸","campo":"corpo","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Desenvolve equilíbrio, força, noção de espaço e coordenação dos grandes movimentos.","materiais":["Almofadas","Fita crepe no chão","Caixa de papelão grande (túnel)","Cadeiras"],"passos":["Monte um caminho: passar por cima de almofadas, andar na linha da fita, passar pelo túnel.","Mostre primeiro como faz.","Deixe cada criança fazer no seu ritmo."],"adapt":{"tea":["Mostre o percurso com fotos antes de começar (antecipação).","Permita repetir a mesma parte quantas vezes quiser.","Não force; convide com calma."],"tdah":["Ótima para gastar energia: deixe repetir o circuito várias vezes.","Dê um comando por etapa: 'agora pula!', 'agora passa!'.","Mude o percurso quando ela perder o interesse."],"altas":["Peça que ela invente uma nova etapa para o circuito.","Desafie a fazer o caminho ao contrário ou de olhos quase fechados.","Pergunte qual parte foi mais difícil e por quê."]}},
+  {"nome":"Massinha caseira","emoji":"🟡","campo":"tracos","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"baixo","bncc":"Fortalece a musculatura das mãos, estimula criatividade e exploração de formas.","materiais":["2 xícaras de farinha","1/2 xícara de sal","1 colher de óleo","Água aos poucos","Corante alimentício (opcional)"],"passos":["Misture tudo até virar massa.","Divida pedaços para cada criança.","Deixe amassar, apertar, rolar e fazer bolinhas."],"adapt":{"tea":["Se não gostar da textura, ofereça em saquinho plástico fechado para apertar.","Comece com pouco tempo de contato.","Evite cheiro forte de corante."],"tdah":["Apertar e socar a massa ajuda a descarregar a energia.","Proponha tarefas curtas: 'faz uma bolinha', 'faz uma cobrinha'.","Sente com ela num canto com poucos brinquedos por perto."],"altas":["Desafie a criar formas com nome: 'faz uma estrela', 'faz um caracol'.","Misture duas cores de massa e veja a cor nova surgir.","Peça que ela conte uma história com o que modelou."]}},
+  {"nome":"Hora da história com fantoches","emoji":"📖","campo":"escuta","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Amplia vocabulário, atenção, escuta e imaginação por meio da narrativa.","materiais":["Livro cartonado ou de pano","Fantoche ou bicho de pelúcia","Cantinho com almofadas"],"passos":["Reúna as crianças na roda.","Conte a história fazendo vozes e sons.","Use o fantoche para chamar a atenção.","Deixe-as tocar o livro e repetir sons."],"adapt":{"tea":["Sente a criança onde ela se sentir confortável (não force a roda).","Use histórias curtas e repetitivas.","Apoie com imagens grandes."],"tdah":["Histórias bem curtas; pare antes de ela se cansar.","Dê o fantoche na mão dela para participar e se mexer.","Faça vozes engraçadas e sons para prender a atenção."],"altas":["Pergunte 'o que você acha que vai acontecer?' antes de virar a página.","Deixe ela continuar a história com o fantoche.","Apresente palavras novas e explique o que significam."]}},
+  {"nome":"Música do bom dia com nomes","emoji":"🎶","campo":"eu","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Constrói identidade e pertencimento ao reconhecer o próprio nome e o dos colegas.","materiais":["Apenas a voz","Opcional: chocalho ou palmas"],"passos":["Cante uma música simples de bom dia.","Cante o nome de cada criança, uma por vez.","Incentive todos a baterem palma quando ouvirem o nome do colega."],"adapt":{"tea":["Mantenha a mesma música todos os dias (rotina previsível).","Não exija resposta verbal; um olhar ou gesto já vale.","Volume de voz suave."],"tdah":["Deixe bater palma ou pular ao ouvir o próprio nome (movimento).","Faça rapidinho para todos terem a vez antes da dispersão.","Dê a ela a tarefa de chacoalhar o chocalho para cada colega."],"altas":["Peça que ela aponte ou diga o nome do próximo colega.","Convide-a a criar um gesto novo para a música.","Pergunte o nome completo ou de quem faltou na roda."]}},
+  {"nome":"Brincadeira do espelho","emoji":"🪞","campo":"eu","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Favorece o autoconhecimento, o reconhecimento da própria imagem e das emoções.","materiais":["Espelho (de parede ou inquebrável)"],"passos":["Leve a criança ao espelho.","Faça caretas, sorria, mostre as partes do rosto.","Nomeie: 'olho, boca, cabelo'.","Deixe ela se observar."],"adapt":{"tea":["Atividade individual costuma funcionar melhor.","Respeite se ela não quiser olhar; deixe explorar sozinha.","Sem pressa."],"tdah":["Faça caretas rápidas e divertidas para ela imitar e se mexer.","Atividade curta, um a um, longe do tumulto.","Transforme em jogo: 'imita o que eu faço!'."],"altas":["Peça que ela mostre uma carinha 'feliz', 'triste', 'brava'.","Pergunte o nome de cada parte do rosto que ela apontar.","Desafie-a a inventar uma careta nova para você imitar."]}},
+  {"nome":"Bacia de água e potinhos","emoji":"💧","campo":"espacos","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Explora quantidade (cheio/vazio), transferência e propriedades da água.","materiais":["Bacia com pouca água","Copinhos e potes de tamanhos diferentes","Toalha no chão"],"passos":["Coloque a bacia com pouca água.","Dê potinhos para encher e esvaziar.","Fale: 'encheu!', 'esvaziou!'.","Supervisione sempre."],"adapt":{"tea":["Água morna costuma acalmar.","Comece com pouca água se houver receio.","Sempre com supervisão de perto."],"tdah":["Mexer na água ajuda a acalmar e focar.","Dê uma missão: 'enche esse pote até a marca'.","Forre o chão antes para não precisar parar a brincadeira."],"altas":["Pergunte qual pote tem mais e qual tem menos água.","Desafie a transferir sem derramar nenhuma gota.","Mostre objetos que afundam e que boiam e pergunte por quê."]}},
+  {"nome":"Separar por cor","emoji":"🔴","campo":"espacos","fases":["creche2","creche3"],"data":null,"custo":"gratis","bncc":"Desenvolve classificação, atenção e reconhecimento de cores (raciocínio lógico inicial).","materiais":["Tampinhas ou bolinhas coloridas","2 ou 3 potes das mesmas cores"],"passos":["Mostre como colocar a tampinha vermelha no pote vermelho.","Deixe a criança separar.","Comemore cada acerto, sem cobrar perfeição."],"adapt":{"tea":["Comece com apenas 2 cores bem diferentes.","Dê um comando por vez ('põe a vermelha aqui').","Use modelo visual ao lado."],"tdah":["Faça poucas tampinhas por vez para terminar rápido.","Transforme em corrida calma: 'guarda todas as vermelhas!'.","Tire da mesa os potes que não estão sendo usados."],"altas":["Acrescente mais cores e peça para separar também por tamanho.","Desafie a contar quantas tampinhas há em cada pote.","Peça que ela nomeie a cor antes de guardar."]}},
+  {"nome":"Dança das partes do corpo","emoji":"💃","campo":"corpo","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Reconhece e nomeia partes do corpo, desenvolve ritmo e consciência corporal.","materiais":["Música animada","Espaço livre"],"passos":["Coloque uma música.","Peça para mexer: 'mexe a mão!', 'mexe o pé!'.","Mostre os movimentos para imitarem."],"adapt":{"tea":["Diminua o volume se ela tapar os ouvidos.","Permita participar de longe, só observando no início.","Movimentos lentos e claros."],"tdah":["Perfeita para gastar energia: deixe pular e dançar solto.","Dê um comando por vez e bem direto: 'pula!', 'agora para!'.","Inclua a brincadeira de 'estátua' para treinar o parar."],"altas":["Peça que ela invente um movimento para o grupo imitar.","Nomeie partes do corpo menos comuns: 'cotovelo', 'tornozelo'.","Desafie a mexer duas partes ao mesmo tempo."]}},
+  {"nome":"Caixa surpresa","emoji":"🎁","campo":"escuta","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Amplia vocabulário e curiosidade ao nomear e descobrir objetos do cotidiano.","materiais":["Uma caixa","Objetos variados e seguros (bola, colher, bicho de pelúcia)"],"passos":["Esconda os objetos na caixa.","A criança tira um por vez.","Nomeie cada objeto: 'é a bola!'.","Pergunte o que é e para que serve."],"adapt":{"tea":["Use objetos do interesse dela para engajar.","Poucos objetos por vez.","Nomeie sempre com a mesma palavra."],"tdah":["A surpresa prende a atenção; tire um objeto de cada vez bem rápido.","Deixe ela enfiar a mão e adivinhar pelo tato antes de ver.","Poucos objetos para terminar antes de dispersar."],"altas":["Peça que ela adivinhe o objeto só pelo toque, sem olhar.","Pergunte para que serve e onde a gente usa.","Desafie a achar dois objetos parecidos ou da mesma cor."]}},
+  {"nome":"Carimbo com esponja","emoji":"🧽","campo":"tracos","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"baixo","bncc":"Explora formas, texturas e cores; desenvolve a expressão artística e a preensão.","materiais":["Pedaços de esponja","Tinta guache","Papel"],"passos":["Molhe a esponja na tinta.","A criança carimba no papel.","Observe as marcas e formas que aparecem."],"adapt":{"tea":["A esponja evita contato direto com a tinta (bom para sensibilidade ao toque).","Um de cada vez, em local tranquilo."],"tdah":["Carimbar batendo a esponja ajuda a descarregar energia.","Trabalhe uma cor por vez para a tarefa ficar curta.","Forre a mesa antes para não interromper a brincadeira."],"altas":["Corte a esponja em formas e pergunte qual marca cada uma deixa.","Desafie a criar um padrão repetido de cores.","Peça que ela conte o que o carimbo parece ('parece uma nuvem?')."]}},
+  {"nome":"Empilhar e derrubar","emoji":"🧱","campo":"espacos","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Trabalha noção de altura, equilíbrio, causa e efeito e coordenação.","materiais":["Copos plásticos ou caixinhas","Blocos de montar grandes"],"passos":["Empilhe junto com a criança.","Deixe ela derrubar (eles amam!).","Conte enquanto empilha: 'um, dois, três'."],"adapt":{"tea":["A repetição (empilhar/derrubar) é acolhedora e previsível.","Deixe repetir à vontade.","Ótima atividade individual."],"tdah":["Faça torres baixas e rápidas para manter o foco.","Deixe derrubar logo: o movimento gasta energia.","Comande um passo por vez: 'empilha agora'."],"altas":["Desafie a fazer torres cada vez mais altas.","Pergunte: 'por que cai quando fica torta?'.","Deixe criar formas diferentes (ponte, fileira)."]}},
+  {"nome":"Túnel de engatinhar","emoji":"🚇","campo":"corpo","fases":["bercario","creche1","creche2"],"data":null,"custo":"gratis","bncc":"Estimula a coordenação dos grandes movimentos e a exploração do espaço.","materiais":["Caixas de papelão grandes abertas nas pontas","Cadeiras com lençol por cima"],"passos":["Monte o túnel.","Mostre passando primeiro.","Convide a criança a atravessar engatinhando."],"adapt":{"tea":["Deixe ela observar antes de entrar.","Túnel curto no começo (menos sensação de fechado).","Nunca force a entrar."],"tdah":["Faça percursos curtos para atravessar várias vezes.","Esconda um brinquedo no fim para dar um alvo.","Use comandos diretos: 'vai, atravessa!'."],"altas":["Crie um túnel mais longo ou com curvas.","Peça para levar um objeto sem deixar cair.","Deixe a criança montar o próprio caminho."]}},
+  {"nome":"Cantigas com gestos","emoji":"🤲","campo":"escuta","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Desenvolve linguagem, memória, ritmo e coordenação ao associar gesto e palavra.","materiais":["Apenas voz e mãos (ex.: 'A Dona Aranha', 'Cabeça, ombro, joelho e pé')"],"passos":["Cante fazendo os gestos.","Repita várias vezes.","Incentive as crianças a imitarem os gestos."],"adapt":{"tea":["Use sempre as mesmas músicas (previsibilidade).","Gestos lentos e bem marcados.","Aceite imitação parcial ou só observação."],"tdah":["Escolha cantigas curtas e bem ritmadas.","Faça em pé, com gestos grandes para gastar energia.","Troque de música antes de cansar."],"altas":["Peça para a criança inventar um gesto novo.","Cante mais rápido ou mais devagar como desafio.","Acrescente palavras novas à letra."]}},
+  {"nome":"Cesto dos tesouros","emoji":"🧺","campo":"espacos","fases":["bercario","creche1"],"data":null,"custo":"gratis","bncc":"Estimula a exploração sensorial livre e a descoberta de materiais (BNCC para bem pequenos).","materiais":["Cesto","Objetos naturais e do cotidiano: colher de pau, escova, pinha, tecido, pote"],"passos":["Coloque os objetos no cesto.","Deixe o bebê explorar livremente, pegando e largando.","Apenas observe e nomeie o que ele pega."],"adapt":{"tea":["Selecione objetos com texturas variadas e seguras.","Reduza a quantidade para não sobrecarregar.","Deixe explorar no tempo dele."],"tdah":["Troque os objetos quando o interesse cair.","Ofereça poucos itens por vez para focar.","Deixe pegar e largar livremente, sem cobrança."],"altas":["Pergunte para que serve cada objeto.","Peça para separar por tipo ou textura.","Acrescente itens novos e curiosos para explorar."]}},
+  {"nome":"Brincadeira de faz de conta (cozinha)","emoji":"🍳","campo":"escuta","fases":["creche2","creche3"],"data":null,"custo":"gratis","bncc":"Desenvolve imaginação, linguagem e representação de papéis sociais.","materiais":["Panelinhas, potes, colheres de plástico","Alimentos de brinquedo ou tampinhas"],"passos":["Monte uma 'cozinha'.","Brinque de fazer comida junto.","Pergunte: 'o que você está cozinhando?'."],"adapt":{"tea":["Mostre como brincar (modelo), pois o faz de conta pode ser difícil.","Aceite o brincar do jeito dela (ex.: organizar os potes).","Sem cobrança de 'história'."],"tdah":["Proponha tarefas curtas: 'mexe a panela e serve'.","Deixe levantar e se mover na brincadeira.","Dê um comando por vez para conduzir."],"altas":["Crie uma receita com vários passos para seguir.","Peça para a criança virar o 'chef' e mandar.","Amplie o vocabulário: nomes de pratos e temperos."]}},
+  {"nome":"Pintura com gelo colorido","emoji":"🧊","campo":"tracos","fases":["creche2","creche3"],"data":null,"custo":"baixo","bncc":"Explora transformações (gelo derretendo), temperatura, cor e causa e efeito.","materiais":["Forminhas de gelo","Água com corante","Palitos de sorvete","Papel"],"passos":["Congele a água colorida com um palito (vira 'giz de gelo').","A criança desliza o gelo no papel.","Observem o gelo derreter e pintar."],"adapt":{"tea":["A sensação de frio pode incomodar — ofereça por pouco tempo.","Deixe observar antes de tocar.","Tenha toalha à mão."],"tdah":["Sessões curtas: o gelo derrete e renova o interesse.","Deixe pintar em pé, com movimentos amplos.","Faça pausa para limpar as mãos e respirar."],"altas":["Pergunte: 'por que o gelo está derretendo?'.","Misture duas cores e veja o que surge.","Deixe prever quanto tempo o gelo dura."]}},
+  {"nome":"Rolar a bola para o amigo","emoji":"⚽","campo":"eu","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Desenvolve interação, espera da vez e convivência com o outro.","materiais":["Uma bola macia"],"passos":["Sentem-se em frente um ao outro.","Role a bola para a criança.","Incentive a rolar de volta.","Vá incluindo mais crianças."],"adapt":{"tea":["Comece só você e a criança, sem grupo.","Antecipe: 'agora vai pra você'.","Aceite outras formas de devolver a bola."],"tdah":["Mantenha o ritmo rápido para segurar a atenção.","Use comandos curtos: 'pega' e 'rola'.","Em dupla, sem espera longa para não dispersar."],"altas":["Aumente a distância como desafio de mira.","Crie regras: rolar dizendo o nome do amigo.","Inclua mais crianças e combinem a ordem da vez."]}},
+  {"nome":"Texturas para tocar","emoji":"✋","campo":"espacos","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Estimula a percepção tátil e a exploração das características dos materiais.","materiais":["Pedaços de tecidos diferentes (liso, áspero, fofo)","Algodão, lixa fina, veludo"],"passos":["Cole as texturas em um papelão ou painel.","Deixe a criança tocar.","Diga: 'esse é macio', 'esse é áspero'."],"adapt":{"tea":["Deixe ela escolher o que quer tocar; respeite recusas.","Apresente uma textura por vez.","Ótima para conhecer sensibilidades dela."],"tdah":["Apresente poucas texturas por vez para focar.","Deixe tocar tudo logo, sem esperar muito.","Faça em pé, movendo-se de uma textura a outra."],"altas":["Peça para nomear e comparar as texturas.","Brinque de adivinhar a textura de olhos fechados.","Amplie o vocabulário: macio, áspero, gelado, fofo."]}},
+  {"nome":"Boliche de garrafas","emoji":"🎳","campo":"corpo","fases":["creche2","creche3"],"data":null,"custo":"gratis","bncc":"Desenvolve coordenação, força, mira e noção de causa e efeito.","materiais":["Garrafas PET vazias","Uma bola"],"passos":["Enfileire as garrafas.","A criança rola a bola para derrubar.","Comemorem juntos as quedas."],"adapt":{"tea":["A queda previsível costuma agradar.","Permita repetir bastante.","Reduza o número de garrafas se houver muito barulho."],"tdah":["Jogadas rápidas e seguidas para gastar energia.","Deixe levantar e montar as garrafas de novo.","Comando direto: 'mira e joga'."],"altas":["Aumente a distância para um alvo mais difícil.","Contem quantas garrafas caíram a cada jogada.","Deixe a criança criar novas regras de pontos."]}},
+  {"nome":"Roda de cheiros","emoji":"👃","campo":"espacos","fases":["creche2","creche3"],"data":null,"custo":"baixo","bncc":"Explora o sentido do olfato e amplia o vocabulário sobre o mundo.","materiais":["Potinhos com algodão e cheiros suaves (canela, laranja, café)"],"passos":["Ofereça cada potinho para cheirar.","Nomeie o cheiro.","Pergunte se é gostoso ou não."],"adapt":{"tea":["Cuidado: olfato pode ser muito sensível — cheiros bem suaves e poucos.","Deixe recusar.","Observe reações."],"tdah":["Poucos potes por vez para não dispersar.","Faça rápido, um cheiro de cada vez.","Deixe segurar e cheirar com as próprias mãos."],"altas":["Peça para adivinhar o cheiro de olhos fechados.","Pergunte de que comida ou lugar lembra.","Amplie o vocabulário: doce, forte, cítrico."]}},
+  {"nome":"Cantinho da calma","emoji":"🧘","campo":"eu","fases":["bercario","creche1","creche2","creche3"],"data":null,"custo":"gratis","bncc":"Apoia o autoconhecimento, a regulação das emoções e o bem-estar.","materiais":["Almofadas","Bicho de pelúcia","Garrafa sensorial","Iluminação suave"],"passos":["Crie um canto aconchegante e tranquilo.","Leve a criança quando estiver agitada.","Deixe-a se acalmar com os objetos."],"adapt":{"tea":["Essencial para crianças com suspeita de TEA: lugar de refúgio sensorial.","Sem estímulos fortes.","Disponível sempre que ela precisar."],"tdah":["Leve a criança ao cantinho ao primeiro sinal de agitação.","Ofereça a garrafa sensorial para focar e desacelerar.","Combine um tempinho curto para respirar fundo."],"altas":["Ensine a nomear o que está sentindo.","Ofereça um livro calmo para explorar sozinha.","Deixe a criança escolher como quer se acalmar."]}},
+  {"nome":"Maracá de Carnaval","emoji":"🪇","campo":"corpo","fases":["creche1","creche2","creche3"],"data":"Carnaval","custo":"gratis","bncc":"Explora ritmo, som e movimento; desenvolve coordenação ao chacoalhar no compasso da música.","materiais":["Garrafa PET pequena ou lata vazia","Punhado de feijão, arroz ou tampinhas","Fita adesiva para fechar bem"],"passos":["Coloque os grãos dentro da garrafa e feche bem com fita.","Coloque uma música de Carnaval.","As crianças chacoalham e dançam."],"adapt":{"tea":["Comece com volume baixo; aumente aos poucos.","Deixe segurar e explorar antes de tocar junto.","Permita só observar se preferir."],"tdah":["Use a música para alternar 'chacoalha' e 'para' (gasta energia com pausa).","Comandos curtos: 'agora rápido', 'agora devagar'.","Brincadeira curta, em pé, para liberar movimento."],"altas":["Proponha criar um ritmo e os colegas repetirem.","Deixe-a 'reger' o grupo (quando todos param e tocam).","Pergunte que outros sons o maracá poderia imitar (chuva, trem)."]}},
+  {"nome":"Máscara de Carnaval","emoji":"🎭","campo":"tracos","fases":["creche2","creche3"],"data":"Carnaval","custo":"baixo","bncc":"Desenvolve criatividade, identidade e coordenação ao enfeitar e usar a própria máscara.","materiais":["Prato de papel ou papelão de caixa","Lápis de cor ou tinta","Palito de picolé (cabo)","Tesoura (uso do adulto)"],"passos":["O adulto recorta os buracos dos olhos.","A criança pinta e enfeita.","Cole o palito como cabo para segurar no rosto."],"adapt":{"tea":["Não force colocar no rosto; pode só segurar ou enfeitar.","Evite enfeites que coçam.","Mostre no espelho com calma."],"tdah":["Divida em etapas curtas: primeiro pinta, depois enfeita.","Deixe levantar e desfilar com a máscara para gastar energia.","Ofereça poucos materiais por vez para reduzir distração."],"altas":["Proponha criar uma máscara de um animal ou personagem inventado.","Peça que conte uma historinha sobre quem ela é com a máscara.","Desafie a misturar duas cores e ver a nova cor."]}},
+  {"nome":"Chuva de papel picado","emoji":"🎊","campo":"corpo","fases":["creche1","creche2","creche3"],"data":"Carnaval","custo":"gratis","bncc":"Estimula movimentos amplos, alegria e percepção do corpo no espaço.","materiais":["Jornal ou papel velho picado em pedacinhos"],"passos":["Pique o papel junto com as crianças (coordenação).","Joguem o papel para o alto como confete.","Depois, brinquem de juntar tudo de volta."],"adapt":{"tea":["Alguns podem se incomodar com o papel caindo no rosto — jogue mais baixo.","Atividade de juntar costuma acalmar.","Deixe participar à distância."],"tdah":["Alterne 'joga' e 'junta' como dois momentos claros.","Use a fase de juntar para acalmar depois da agitação.","Comando direto: 'agora todo mundo cata o papel'."],"altas":["Peça para juntar o papel separando por cor ou tamanho.","Desafie a contar quantos punhados consegue juntar.","Proponha criar 'fogos de artifício' lançando bem alto."]}},
+  {"nome":"Caça aos ovinhos","emoji":"🥚","campo":"espacos","fases":["creche1","creche2","creche3"],"data":"Páscoa","custo":"gratis","bncc":"Desenvolve atenção, busca, noção de espaço e a alegria da descoberta.","materiais":["Bolinhas de papel amassado (ou ovos de plástico, se tiver)","Cestinha ou pote"],"passos":["Esconda os 'ovinhos' pela sala, à vista.","As crianças procuram e colocam na cestinha.","Comemore cada achado."],"adapt":{"tea":["Esconda à vista para não gerar frustração.","Mostre um exemplo primeiro.","Sem disputa: cada um no seu tempo."],"tdah":["Atividade ótima para gastar energia procurando e andando.","Dê uma meta clara: 'ache 3 ovinhos'.","Faça em rodadas curtas para manter o foco."],"altas":["Esconda alguns mais difíceis e dê dicas ('perto da janela').","Peça para contar e separar os ovinhos por cor.","Deixe-a esconder os ovinhos para os colegas acharem."]}},
+  {"nome":"Orelhas de coelho","emoji":"🐰","campo":"tracos","fases":["creche1","creche2","creche3"],"data":"Páscoa","custo":"gratis","bncc":"Trabalha identidade, faz de conta e reconhecimento do próprio corpo.","materiais":["Tira de papelão ou papel resistente para a cabeça","Papel para as orelhas","Cola ou grampeador (adulto)"],"passos":["Monte a tira na medida da cabeça.","A criança ajuda a colar as orelhas.","Brinquem de pular como coelhinho."],"adapt":{"tea":["Não force usar na cabeça; pode segurar na mão.","Material macio, sem apertar.","Mostre no espelho sem pressa."],"tdah":["Use o 'pular como coelho' para liberar energia entre as etapas.","Comandos curtos: 'cola uma orelha', depois 'a outra'.","Mantenha a montagem rápida para não perder o interesse."],"altas":["Pergunte que outros bichos têm orelhas e como pulam.","Deixe-a inventar uma história do coelhinho.","Desafie a contar quantos pulos consegue dar."]}},
+  {"nome":"Cocar colorido","emoji":"🪶","campo":"tracos","fases":["creche2","creche3"],"data":"Dia dos Povos Indígenas","custo":"gratis","bncc":"Valoriza a cultura dos povos indígenas e desenvolve a expressão artística e a identidade.","materiais":["Tira de papelão (reaproveitado)","Papel colorido cortado em forma de penas","Lápis de cor ou tinta"],"passos":["Converse de forma simples sobre os povos indígenas.","A criança pinta e cola as 'penas'.","Monte o cocar na cabecinha dela."],"adapt":{"tea":["Ofereça poucas cores para não sobrecarregar.","Deixe usar ou só segurar.","Fale de forma curta e tranquila."],"tdah":["Divida em passos curtos: pinta uma pena, cola, repete.","Deixe levantar e 'desfilar' com o cocar pronto.","Mantenha poucos materiais à vista para focar."],"altas":["Conte mais detalhes sobre os povos indígenas e suas aldeias.","Peça que crie um padrão de cores nas penas.","Pergunte o significado das cores que ela escolheu."]}},
+  {"nome":"Pintura no braço (povos indígenas)","emoji":"🎨","campo":"tracos","fases":["creche2","creche3"],"data":"Dia dos Povos Indígenas","custo":"baixo","bncc":"Explora a cultura indígena, a expressão corporal e a sensação tátil da tinta na pele.","materiais":["Tinta guache lavável","Pincel ou dedo"],"passos":["Faça desenhos simples (pontos, linhas) no braço da criança.","Mostre antes no seu próprio braço.","Deixe ela escolher se quer."],"adapt":{"tea":["MUITO importante respeitar: tinta na pele pode incomodar.","Ofereça pintar um papel em vez do braço.","Pano úmido por perto para limpar."],"tdah":["Faça desenhos rápidos para não exigir ficar parada muito tempo.","Deixe-a pintar o seu braço também, alternando a vez.","Comando claro: 'fica firme o bracinho um pouquinho'."],"altas":["Peça que crie seu próprio padrão de pontos e linhas.","Pergunte o que cada desenho poderia significar.","Desafie a repetir o mesmo padrão dos dois lados."]}},
+  {"nome":"Cartão com a mãozinha","emoji":"💐","campo":"eu","fases":["creche1","creche2","creche3"],"data":"Dia das Mães","custo":"baixo","bncc":"Desenvolve vínculo afetivo, identidade e a expressão artística como presente afetivo.","materiais":["Papel ou papelão dobrado","Tinta guache","Opcional: papel colorido para enfeitar"],"passos":["Passe tinta na mãozinha da criança.","Carimbe no papel (vira flor ou coração).","Escreva uma mensagem carinhosa."],"adapt":{"tea":["Se não gostar de tinta na mão, use carimbo de esponja ou desenho.","Faça individualmente, com calma."],"tdah":["Faça o carimbo rápido para não exigir mão parada muito tempo.","Deixe enfeitar livremente depois, gastando energia.","Um passo por vez: primeiro carimba, depois enfeita."],"altas":["Peça que escolha e nomeie a cor e o formato (flor ou coração).","Deixe-a 'ler' ou ditar a mensagem para a mamãe.","Desafie a fazer várias mãozinhas formando um buquê."]}},
+  {"nome":"Bandeirinhas juninas","emoji":"🎐","campo":"tracos","fases":["creche2","creche3"],"data":"Festa Junina","custo":"gratis","bncc":"Trabalha cores, coordenação motora fina e a cultura das festas populares.","materiais":["Papel colorido reaproveitado (revistas, encartes)","Barbante","Cola"],"passos":["Recorte triângulos (adulto).","A criança cola os triângulos no barbante.","Pendurem para enfeitar a sala."],"adapt":{"tea":["Dê pedaços já prontos para colar.","Ambiente sem música muito alta.","Um passo por vez."],"tdah":["Deixe-a ajudar a pendurar, levantando e se movimentando.","Comando único por vez: 'cola este aqui'.","Faça poucas bandeirinhas por rodada para manter o foco."],"altas":["Peça que monte uma sequência de cores (vermelho, azul, repete).","Desafie a contar quantas bandeirinhas já colou.","Deixe-a planejar onde pendurar para enfeitar melhor."]}},
+  {"nome":"Pescaria junina","emoji":"🎣","campo":"espacos","fases":["creche2","creche3"],"data":"Festa Junina","custo":"gratis","bncc":"Desenvolve coordenação olho-mão, mira, espera da vez e noção de quantidade.","materiais":["Peixinhos de papelão com um clipe","Vara: cabo de vassoura ou palito com barbante e um ímã (ou ganchinho)"],"passos":["Espalhe os peixinhos no chão.","A criança 'pesca' com a varinha.","Contem juntos quantos pescou."],"adapt":{"tea":["Use vara curta, mais fácil de controlar.","Comece com poucos peixes.","Comemore qualquer tentativa."],"tdah":["Dê uma meta curta: 'pesca 2 peixinhos e passa a vez'.","Atividade em pé ajuda a gastar energia com foco na mira.","Reduza a espera fazendo rodadas rápidas."],"altas":["Peça que pesque só os peixes de uma cor.","Desafie a somar quantos pescou no total.","Numere os peixes e peça para pescar em ordem."]}},
+  {"nome":"Quadrilha dos pequenos","emoji":"🤠","campo":"corpo","fases":["creche1","creche2","creche3"],"data":"Festa Junina","custo":"gratis","bncc":"Desenvolve ritmo, coordenação, lateralidade e convivência em grupo.","materiais":["Música de quadrilha"],"passos":["Façam uma roda.","Movimentos simples: rodar, bater palma, 'olha a chuva!'.","Deixe cada um no seu ritmo."],"adapt":{"tea":["Diminua o volume se necessário.","Participar de fora também vale.","Movimentos lentos e repetidos."],"tdah":["Use os comandos ('olha a chuva!') para canalizar a energia.","Movimentos bem marcados e curtos, um de cada vez.","Permita sair da roda e voltar quando precisar se mexer."],"altas":["Deixe-a puxar um movimento novo para o grupo imitar.","Peça que lembre a sequência: 'roda, palma, chuva'.","Desafie a marcar o ritmo batendo o pé junto."]}},
+  {"nome":"Medalha para o papai","emoji":"🏅","campo":"eu","fases":["creche1","creche2","creche3"],"data":"Dia dos Pais","custo":"gratis","bncc":"Fortalece o vínculo afetivo e a identidade ao criar um presente para a família.","materiais":["Tampa de pote ou círculo de papelão","Barbante ou fita","Lápis de cor"],"passos":["A criança pinta a 'medalha'.","Faça um furo e passe o barbante.","Escreva 'Melhor Papai'."],"adapt":{"tea":["Material leve, sem apertar no pescoço.","Aceite o jeito dela de pintar.","Atividade individual."],"tdah":["Pintura rápida em um espaço pequeno mantém o foco.","Deixe entregar a medalha 'desfilando' para gastar energia.","Um passo por vez: pinta, depois enfeita."],"altas":["Peça que escolha as cores favoritas do papai e explique por quê.","Deixe-a ditar o que escrever na medalha.","Desafie a desenhar algo que faz com o papai."]}},
+  {"nome":"Saci e o folclore","emoji":"👣","campo":"escuta","fases":["creche2","creche3"],"data":"Folclore","custo":"gratis","bncc":"Amplia imaginação, linguagem e o contato com a cultura popular brasileira.","materiais":["Apenas a voz (conte a lenda do Saci de forma simples e alegre)","Opcional: fantoche de meia"],"passos":["Conte a história do Saci pulando numa perna só.","Imitem o Saci pulando.","Façam sons e brincadeiras."],"adapt":{"tea":["História curta e repetitiva.","Não force pular; pode só assistir.","Apoie com imagem do personagem."],"tdah":["Use o 'pular numa perna só' para gastar energia entre as falas.","Conte a história em trechos curtos com ação no meio.","Comandos diretos: 'agora pula como o Saci'."],"altas":["Pergunte o que mais o Saci poderia aprontar e crie junto.","Apresente outro personagem do folclore (Curupira, Iara).","Peça que reconte a história com as próprias palavras."]}},
+  {"nome":"Plantar feijão no algodão","emoji":"🌱","campo":"espacos","fases":["creche2","creche3"],"data":"Primavera / Dia da Árvore","custo":"baixo","bncc":"Observa transformações da natureza, o tempo e o cuidado com a vida (germinação).","materiais":["Copo plástico reaproveitado","Algodão","Grão de feijão","Água"],"passos":["Coloque o algodão úmido no copo.","A criança põe o feijão.","Acompanhem o feijão crescer nos próximos dias."],"adapt":{"tea":["A rotina de regar todo dia é ótima (previsível).","Deixe tocar o algodão e o feijão.","Acompanhe o interesse dela."],"tdah":["Dê a ela a tarefa diária e curta de regar (rotina com movimento).","Passos rápidos: molha o algodão, põe o feijão, pronto.","Use o crescimento como 'missão' para checar a cada dia."],"altas":["Peça que observe e descreva o que mudou a cada dia.","Pergunte do que a planta precisa para crescer.","Desafie a comparar dois copos (um com água, outro sem)."]}},
+  {"nome":"Colagem da natureza","emoji":"🍂","campo":"tracos","fases":["creche1","creche2","creche3"],"data":"Primavera / Dia da Árvore","custo":"gratis","bncc":"Explora texturas, cores e elementos naturais; desenvolve percepção e criatividade.","materiais":["Folhas secas, gravetos, pétalas (coletados no pátio)","Papel","Cola"],"passos":["Façam um passeio para juntar folhinhas.","A criança cola no papel livremente.","Conversem sobre o que encontraram."],"adapt":{"tea":["Deixe escolher os elementos que quiser tocar.","Algumas texturas podem incomodar — respeite.","Passeio curto e tranquilo."],"tdah":["Use o passeio para coletar e gastar energia andando.","Dê uma meta: 'junta 3 folhas e voltamos'.","Cole logo após coletar para manter o interesse."],"altas":["Peça que separe os elementos por cor, tamanho ou textura.","Pergunte de qual árvore veio cada folha.","Desafie a montar uma figura (bicho, rosto) com os elementos."]}},
+  {"nome":"Imitando os bichos","emoji":"🐶","campo":"corpo","fases":["creche1","creche2","creche3"],"data":"Dia dos Animais","custo":"gratis","bncc":"Desenvolve expressão corporal, linguagem (sons) e imaginação ao representar animais.","materiais":["Apenas o corpo e a voz","Opcional: figuras de animais"],"passos":["Mostre um animal e seu som ('o cachorro faz au-au').","Imitem juntos: pular como sapo, andar como gato.","Deixe cada criança escolher um bicho."],"adapt":{"tea":["Use os animais de interesse dela.","Sons suaves, sem susto.","Imitar de longe também vale."],"tdah":["Atividade ótima para gastar energia pulando e correndo.","Troque de bicho rápido para manter o interesse.","Comando direto: 'agora todos viram sapo'."],"altas":["Peça que imite um animal e os colegas adivinhem qual é.","Pergunte onde cada bicho vive e o que come.","Desafie a inventar um bicho novo com sons próprios."]}},
+  {"nome":"Bichinho de rolinho","emoji":"🦋","campo":"tracos","fases":["creche2","creche3"],"data":"Dia dos Animais","custo":"gratis","bncc":"Desenvolve criatividade e coordenação motora fina ao transformar sucata em bichinho.","materiais":["Rolo de papel higiênico vazio","Lápis de cor ou tinta","Papel para asas/orelhas","Cola"],"passos":["A criança pinta o rolinho.","Colem asas, orelhas ou olhos de papel.","Brinquem com o bichinho criado."],"adapt":{"tea":["Dê as partes prontas para colar.","Poucas etapas por vez.","Aceite o resultado do jeito dela."],"tdah":["Divida em etapas curtas: pinta, cola, brinca.","Deixe brincar com o bichinho pronto para liberar energia.","Poucos materiais à vista por vez para reduzir distração."],"altas":["Pergunte que bicho ela vai criar e como ele se move.","Peça que invente um nome e uma história para o bichinho.","Desafie a fazer dois bichinhos que sejam 'amigos'."]}},
+  {"nome":"Árvore de Natal de mãozinhas","emoji":"🎄","campo":"tracos","fases":["creche1","creche2","creche3"],"data":"Natal","custo":"baixo","bncc":"Trabalha identidade, cores e o sentido de pertencimento em uma produção coletiva.","materiais":["Tinta verde","Papel grande (cartaz coletivo)","Opcional: papel colorido para enfeites"],"passos":["Carimbe a mãozinha verde de cada criança formando uma árvore.","Colem 'enfeites' de papel.","Pendurem o cartaz na sala."],"adapt":{"tea":["Se não gostar de tinta, recorte a mãozinha em papel e cole.","Faça uma criança por vez.","Pano úmido por perto."],"tdah":["Carimbo rápido, sem exigir mão parada por muito tempo.","Deixe colar os enfeites livremente para gastar energia.","Espere sua vez em rodadas curtas, uma criança por vez."],"altas":["Peça que escolha onde colar cada enfeite na árvore.","Desafie a contar quantas mãozinhas formaram a árvore.","Deixe-a planejar as cores dos enfeites do cartaz."]}},
+  {"nome":"Cadê o brinquedo? Achou!","emoji":"🙈","campo":"espacos","fases":["bercario"],"data":null,"custo":"gratis","bncc":"O bebê descobre a permanência do objeto: percebe que algo continua existindo mesmo quando some da vista (Espaços, tempos, quantidades, relações e transformações).","materiais":["Um paninho ou fralda limpa","Um brinquedo grande favorito do bebê"],"passos":["Mostre o brinquedo ao bebê e deixe ele tocar.","Cubra o brinquedo com o paninho na frente dele.","Pergunte com voz animada: cadê?","Tire o paninho e comemore: achou!","Repita deixando o bebê tentar puxar o pano."],"adapt":{"tea":["Use sempre o mesmo brinquedo e a mesma frase para dar previsibilidade.","Esconda só metade do objeto no início, facilitando a busca.","Respeite o tempo do bebê, sem apressar a reação."],"tdah":["Faça rodadas curtas para acompanhar o ritmo agitado do bebê.","Mantenha o ambiente calmo, sem outros brinquedos por perto.","Use a voz suave para ajudar na autorregulação entre as rodadas."],"altas":["Esconda em lugares diferentes para desafiar a busca.","Use dois objetos e esconda só um, observando se ele percebe.","Aumente o tempo escondido aos poucos."]}},
+  {"nome":"Cesto dos tesouros de texturas","emoji":"🧺","campo":"corpo","fases":["bercario","creche1"],"data":null,"custo":"baixo","bncc":"O bebê explora diferentes texturas com as mãos e a boca, desenvolvendo o tato e a coordenação ao pegar e soltar (Corpo, gestos e movimentos).","materiais":["Cesto ou caixa baixa","Esponja, pedaço de tapete, colher de pau","Retalhos de tecido grossos e seguros"],"passos":["Lave bem os objetos antes de oferecer.","Coloque tudo no cesto perto do bebê sentado ou deitado.","Deixe o bebê escolher e explorar livremente.","Nomeie as texturas: macio, áspero, duro.","Supervisione sempre para evitar engasgos."],"adapt":{"tea":["Ofereça poucos objetos por vez para não sobrecarregar.","Comece por texturas que o bebê já aceita bem.","Não force o toque se o bebê recusar uma textura."],"tdah":["Apresente um objeto de cada vez para focar a atenção.","Faça pausas se o bebê ficar muito agitado.","Use texturas suaves para ajudar a acalmar."],"altas":["Acrescente mais variedade de texturas para explorar.","Pergunte onde está o objeto macio, estimulando a escolha.","Compare duas texturas bem diferentes lado a lado."]}},
+  {"nome":"Móbile que dança","emoji":"🎐","campo":"tracos","fases":["bercario"],"data":null,"custo":"baixo","bncc":"O bebê acompanha objetos coloridos com o olhar, percebendo cores, movimento e contrastes visuais (Traços, sons, cores e formas).","materiais":["Barbante resistente","Tampas coloridas ou fitas largas","Cabo de vassoura ou galho seguro"],"passos":["Amarre as tampas e fitas no barbante bem firme.","Pendure o móbile fora do alcance das mãos do bebê.","Mexa devagar para criar movimento suave.","Observe o bebê seguir os objetos com os olhos.","Troque as cores em outros dias."],"adapt":{"tea":["Use movimentos lentos e poucas cores para não agitar.","Evite sons fortes junto ao móbile no começo.","Mantenha o mesmo móbile por alguns dias para familiaridade."],"tdah":["Mova um objeto de cada vez para focar o olhar.","Use cores suaves se o bebê ficar muito excitado.","Faça sessões curtas e calmas."],"altas":["Adicione objetos com brilho ou texturas diferentes.","Mova em direções variadas para desafiar o olhar.","Aproxime e afaste para trabalhar a distância."]}},
+  {"nome":"Cantiga de ninar no colo","emoji":"🎵","campo":"escuta","fases":["bercario"],"data":null,"custo":"gratis","bncc":"O bebê ouve a voz do adulto, percebe ritmo e melodia e fortalece o vínculo afetivo pela linguagem (Escuta, fala, pensamento e imaginação).","materiais":["Apenas a voz do educador","Colo ou cadeira de balanço (opcional)"],"passos":["Pegue o bebê no colo de forma aconchegante.","Cante uma cantiga conhecida com voz baixa e suave.","Embale devagar no ritmo da música.","Olhe nos olhos do bebê enquanto canta.","Repita a mesma cantiga em outros momentos."],"adapt":{"tea":["Cante sempre a mesma melodia para gerar segurança.","Mantenha o volume bem baixo e constante.","Respeite se o bebê preferir menos contato visual."],"tdah":["Use ritmo lento para ajudar o bebê a se acalmar.","Embale com movimento suave e contínuo.","Faça da cantiga parte da rotina de sono."],"altas":["Varie as cantigas para enriquecer o repertório.","Inclua gestos simples com as mãos na música.","Mude o ritmo devagar, observando a reação."]}},
+  {"nome":"Massagem com lenços macios","emoji":"🧣","campo":"eu","fases":["bercario"],"data":null,"custo":"baixo","bncc":"O bebê recebe toque afetuoso, percebe seu próprio corpo e constrói confiança e vínculo com o educador (O eu, o outro e o nós).","materiais":["Lenços ou fraldas macias e limpas","Local aquecido e tranquilo"],"passos":["Deite o bebê em superfície segura e confortável.","Passe o lenço suavemente pelos bracinhos e pés.","Nomeie as partes do corpo com voz carinhosa.","Observe os sinais de prazer ou desconforto.","Pare se o bebê demonstrar incômodo."],"adapt":{"tea":["Comece com toques leves em uma só parte do corpo.","Avise antes de tocar, criando previsibilidade.","Use sempre o mesmo lenço com textura conhecida."],"tdah":["Faça movimentos lentos para ajudar a relaxar.","Escolha um momento mais calmo do dia.","Encurte a atividade se o bebê se inquietar."],"altas":["Use lenços de texturas diferentes para explorar sensações.","Brinque de esconder o rosto com o lenço.","Nomeie mais partes do corpo durante a massagem."]}},
+  {"nome":"Rolar e alcançar o objeto","emoji":"🤸","campo":"corpo","fases":["bercario"],"data":null,"custo":"gratis","bncc":"O bebê é estimulado a rolar, esticar e se deslocar para alcançar um objeto, fortalecendo músculos e coordenação (Corpo, gestos e movimentos).","materiais":["Tapete ou colchonete limpo","Brinquedo colorido ou chocalho grande"],"passos":["Deite o bebê de barriga para cima no tapete.","Mostre o brinquedo um pouco fora do alcance.","Incentive com a voz para ele se esticar.","Comemore cada tentativa de movimento.","Aproxime o objeto se ele se cansar."],"adapt":{"tea":["Use um brinquedo que já desperte o interesse dele.","Mantenha o espaço limpo e sem distrações.","Celebre com calma para não sobrecarregar."],"tdah":["Faça tentativas curtas para manter o foco.","Reduza estímulos visuais ao redor do tapete.","Permita pausas para o bebê se reorganizar."],"altas":["Coloque o objeto um pouco mais longe a cada vez.","Use dois objetos em lados diferentes.","Proponha rolar para os dois lados."]}},
+  {"nome":"Quem é o bebê do espelho?","emoji":"🪞","campo":"eu","fases":["bercario","creche1"],"data":null,"custo":"baixo","bncc":"O bebê observa sua imagem, reconhece o próprio corpo e começa a construir a noção de identidade (O eu, o outro e o nós).","materiais":["Espelho seguro e inquebrável","Fita para fixar na parede baixa"],"passos":["Fixe o espelho na altura do bebê, bem firme.","Sente perto dele de frente para o espelho.","Aponte e diga: olha o bebê!","Faça caretas e gestos para ele imitar.","Nomeie partes do corpo no reflexo."],"adapt":{"tea":["Deixe o bebê observar sem exigir interação.","Comece com sessões bem curtas perto do espelho.","Use voz calma, evitando gestos bruscos."],"tdah":["Mantenha sessões curtas e tranquilas.","Evite muitos estímulos ao redor do espelho.","Faça movimentos lentos para ele acompanhar."],"altas":["Mostre objetos no reflexo para ele comparar.","Brinque de aparecer e sumir do espelho.","Nomeie emoções nas caretas que fizerem juntos."]}},
+  {"nome":"Caça às bolhas de sabão","emoji":"🫧","campo":"espacos","fases":["bercario","creche1"],"data":null,"custo":"baixo","bncc":"O bebê acompanha bolhas que aparecem e somem, percebendo movimento, surgimento e transformação (Espaços, tempos, quantidades, relações e transformações).","materiais":["Água com um pouco de sabão neutro","Canudo ou aro feito de arame revestido"],"passos":["Faça as bolhas longe do rosto do bebê.","Solte poucas bolhas no ar perto dele.","Aponte e diga: olha a bolha!","Deixe o bebê seguir e tentar tocar.","Nunca deixe o bebê sozinho com a água."],"adapt":{"tea":["Solte poucas bolhas por vez para não assustar.","Observe a reação antes de aumentar o estímulo.","Mantenha um ritmo previsível e lento."],"tdah":["Faça pausas entre as rodadas de bolhas.","Use poucas bolhas para não superexcitar.","Acalme com a voz se o bebê se agitar muito."],"altas":["Varie o tamanho das bolhas para explorar.","Conte as bolhas em voz alta enquanto somem.","Sopre em direções diferentes para ele acompanhar."]}}
 ];
 
 const NOMES_CAMPO = {
@@ -486,133 +247,123 @@ const NOMES_CAMPO = {
   escuta:"Escuta, fala, pensamento e imaginação",
   espacos:"Espaços, tempos, quantidades…"
 };
+const NOMES_FASE = {bercario:"🍼 Berçário", creche1:"Creche 1", creche2:"Creche 2", creche3:"Creche 3"};
+const PERFIS = {
+  tea:{titulo:"🧩 Adaptação para TEA (Autismo)", classe:"adapt-tea"},
+  tdah:{titulo:"⚡ Adaptação para TDAH", classe:"adapt-tdah"},
+  altas:{titulo:"🌟 Adaptação para Altas Habilidades", classe:"adapt-altas"}
+};
 
-let mostrarTea = false;
 const FAV_KEY = "creche_favoritas";
-
-function toggleTea(){
-  mostrarTea = !mostrarTea;
-  document.getElementById("swTea").classList.toggle("on", mostrarTea);
-}
-
 const CUSTOM_KEY = "creche_minhas_ativ";
+function getFavs(){ try{return JSON.parse(localStorage.getItem(FAV_KEY))||[]}catch(e){return []} }
+function setFavs(f){ localStorage.setItem(FAV_KEY, JSON.stringify(f)); }
 function getCustom(){ try{return JSON.parse(localStorage.getItem(CUSTOM_KEY))||[]}catch(e){return []} }
 function setCustom(c){ localStorage.setItem(CUSTOM_KEY, JSON.stringify(c)); }
 function todasAtividades(){ return ATIVIDADES.concat(getCustom()); }
 
+function valFiltro(id){ return document.getElementById(id).value; }
+
 function filtrar(){
-  const idade = document.getElementById("fIdade").value;
-  const campo = document.getElementById("fCampo").value;
-  const data  = document.getElementById("fData").value;
+  const turma = valFiltro("fTurma");
+  const campo = valFiltro("fCampo");
+  const data  = valFiltro("fData");
   return todasAtividades().filter(a=>{
-    const okIdade = idade==="todas" || a.idades.includes(Number(idade));
+    const fases = a.fases || [];
+    const okTurma = turma==="todas" || fases.includes(turma);
     const okCampo = campo==="todos" || a.campo===campo;
     const okData  = data==="todas" || a.data===data;
-    return okIdade && okCampo && okData;
+    return okTurma && okCampo && okData;
   });
 }
 
+function fasesTxt(fases){
+  if(!fases || !fases.length) return "Todas as turmas";
+  if(fases.length===4) return "Todas as turmas";
+  return fases.map(f=>NOMES_FASE[f]||f).join(" · ");
+}
+
 function cardHTML(a, favorita, variacao){
-  const idadesTxt = a.idades.length===3 ? "1 a 3 anos" : a.idades.map(i=>i+(i===1?" ano":" anos")).join(", ");
-  const teaBloco = mostrarTea ? `
-    <div class="bloco tea">
-      <h3>♿ Adaptação (suspeita de TEA)</h3>
-      <ul>${a.tea.map(t=>`<li>${t}</li>`).join("")}</ul>
-    </div>` : "";
+  const perfil = valFiltro("fPerfil");
   const custo = a.custo || "gratis";
   const custoTag = custo==="baixo"
     ? `<span class="tag custo-baixo">💲 Baixo custo</span>`
     : `<span class="tag custo-gratis">🆓 Sem custo / reaproveitável</span>`;
   const dataTag = a.data ? `<span class="tag data">🎉 ${a.data}</span>` : "";
+  const varBloco = variacao ? `<div class="bloco variacao"><h3>🎲 Faça de um jeito novo: ${variacao.emoji} ${variacao.titulo}</h3><p>${variacao.desc}</p></div>` : "";
+  let adaptBloco = "";
+  if(perfil!=="tipico" && a.adapt && a.adapt[perfil] && a.adapt[perfil].length){
+    const p = PERFIS[perfil];
+    adaptBloco = `<div class="bloco adapt ${p.classe}"><h3>${p.titulo}</h3><ul>${a.adapt[perfil].map(t=>`<li>${t}</li>`).join("")}</ul></div>`;
+  }
   return `<div class="card">
     <h2>${a.emoji} ${a.nome}</h2>
     <div class="tags">
-      <span class="tag idade">👶 ${idadesTxt}</span>
-      <span class="tag">${NOMES_CAMPO[a.campo]}</span>
+      <span class="tag turma">👶 ${fasesTxt(a.fases)}</span>
+      <span class="tag">${NOMES_CAMPO[a.campo]||""}</span>
       ${dataTag}
       ${custoTag}
     </div>
-    ${variacao?`<div class="bloco variacao"><h3>🎲 Faça de um jeito novo: ${variacao.emoji} ${variacao.titulo}</h3><p>${variacao.desc}</p></div>`:""}
-    <div class="bloco">
-      <h3>📌 O que trabalha na criança (BNCC)</h3>
-      <p>${a.bncc}</p>
-    </div>
-    <div class="bloco">
-      <h3>🧺 Materiais</h3>
-      <ul>${a.materiais.map(m=>`<li>${m}</li>`).join("")}</ul>
-    </div>
-    <div class="bloco">
-      <h3>👣 Como fazer</h3>
-      <ol>${a.passos.map(p=>`<li>${p}</li>`).join("")}</ol>
-    </div>
-    ${teaBloco}
+    ${varBloco}
+    <div class="bloco"><h3>📌 O que trabalha na criança (BNCC)</h3><p>${a.bncc}</p></div>
+    <div class="bloco"><h3>🧺 Materiais</h3><ul>${a.materiais.map(m=>`<li>${m}</li>`).join("")}</ul></div>
+    <div class="bloco"><h3>👣 Como fazer</h3><ol>${a.passos.map(p=>`<li>${p}</li>`).join("")}</ol></div>
+    ${adaptBloco}
     <div class="card-acoes">
-      <button type="button" class="mini" onclick="toggleFav('${a.nome}')">${favorita?"💔 Remover":"⭐ Favoritar"}</button>
+      <button type="button" class="mini" onclick="toggleFav('${a.nome.replace(/'/g,"\\'")}')">${favorita?"💔 Remover":"⭐ Favoritar"}</button>
     </div>
   </div>`;
 }
 
-function gerar(){
-  const lista = filtrar();
+/* ===== estado central de exibição (permite trocar o perfil sem perder o card) ===== */
+let estado = {titulo:"", itens:[], modoFav:false};
+function render(){
   const res = document.getElementById("resultado");
-  if(lista.length===0){
-    res.innerHTML = `<div class="vazio">😅 Nenhuma atividade para esse filtro. Tente "Qualquer idade" ou "Qualquer campo".</div>`;
+  if(!estado.itens.length){
+    res.innerHTML = estado.titulo ? `<div class="vazio">${estado.titulo}</div>` : `<div class="vazio">👆 Escolha os filtros e toque em <b>Gerar atividade</b>.</div>`;
     return;
   }
-  const a = lista[Math.floor(Math.random()*lista.length)];
-  res.innerHTML = cardHTML(a, getFavs().includes(a.nome));
-  window.scrollTo({top:res.offsetTop-10,behavior:"smooth"});
-}
-
-function planoSemana(){
-  const lista = filtrar();
-  const res = document.getElementById("resultado");
-  if(lista.length===0){
-    res.innerHTML = `<div class="vazio">😅 Sem atividades para esse filtro.</div>`;
-    return;
-  }
-  const dias = ["Segunda","Terça","Quarta","Quinta","Sexta"];
-  const baralho = [...lista].sort(()=>Math.random()-0.5);
   let html = "";
-  dias.forEach((dia,i)=>{
-    const a = baralho[i % baralho.length];
-    html += `<div class="dia-titulo">📅 ${dia}-feira</div>` + cardHTML(a, getFavs().includes(a.nome));
+  estado.itens.forEach(it=>{
+    if(it.titulo) html += `<div class="dia-titulo">${it.titulo}</div>`;
+    html += cardHTML(it.a, getFavs().includes(it.a.nome), it.variacao);
   });
   res.innerHTML = html;
   window.scrollTo({top:res.offsetTop-10,behavior:"smooth"});
 }
 
-function getFavs(){ try{return JSON.parse(localStorage.getItem(FAV_KEY))||[]}catch(e){return []} }
-function setFavs(f){ localStorage.setItem(FAV_KEY, JSON.stringify(f)); }
-
-function toggleFav(nome){
-  let f = getFavs();
-  if(f.includes(nome)) f = f.filter(n=>n!==nome);
-  else f.push(nome);
-  setFavs(f);
-  // re-render: se estiver na tela de favoritas, atualiza; senão atualiza o card atual
-  if(document.getElementById("resultado").dataset.modo==="fav") verFavoritas();
-  else gerarMesmo(nome);
+function gerar(){
+  const lista = filtrar();
+  if(!lista.length){ estado={titulo:"😅 Nenhuma atividade para esse filtro. Tente 'Todas as turmas' ou 'Qualquer campo'.",itens:[],modoFav:false}; render(); return; }
+  const a = lista[Math.floor(Math.random()*lista.length)];
+  estado = {titulo:"", itens:[{a:a}], modoFav:false};
+  render();
 }
 
-function gerarMesmo(nome){
-  const a = todasAtividades().find(x=>x.nome===nome);
-  if(a) document.getElementById("resultado").innerHTML = cardHTML(a, getFavs().includes(a.nome));
+function planoSemana(){
+  const lista = filtrar();
+  if(!lista.length){ estado={titulo:"😅 Sem atividades para esse filtro.",itens:[],modoFav:false}; render(); return; }
+  const dias = ["Segunda","Terça","Quarta","Quinta","Sexta"];
+  const baralho = [...lista].sort(()=>Math.random()-0.5);
+  estado = {titulo:"", modoFav:false, itens: dias.map((dia,i)=>({a:baralho[i%baralho.length], titulo:`📅 ${dia}-feira`}))};
+  render();
 }
 
 function verFavoritas(){
   const f = getFavs();
-  const res = document.getElementById("resultado");
-  res.dataset.modo = "fav";
-  if(f.length===0){
-    res.innerHTML = `<div class="vazio">⭐ Você ainda não favoritou nenhuma atividade.<br>Toque em "Favoritar" em uma atividade para guardá-la aqui.</div>`;
-    return;
-  }
-  res.innerHTML = todasAtividades().filter(a=>f.includes(a.nome)).map(a=>cardHTML(a,true)).join("");
-  window.scrollTo({top:res.offsetTop-10,behavior:"smooth"});
+  if(!f.length){ estado={titulo:"⭐ Você ainda não favoritou nenhuma atividade.<br>Toque em 'Favoritar' em uma atividade para guardá-la aqui.",itens:[],modoFav:true}; render(); return; }
+  estado = {titulo:"", modoFav:true, itens: todasAtividades().filter(a=>f.includes(a.nome)).map(a=>({a:a}))};
+  render();
 }
 
-/* ====== MOTOR DE VARIAÇÕES (Surpreenda-me) ====== */
+function toggleFav(nome){
+  let f = getFavs();
+  if(f.includes(nome)) f = f.filter(n=>n!==nome); else f.push(nome);
+  setFavs(f);
+  if(estado.modoFav) verFavoritas(); else render();
+}
+
+/* ===== MOTOR DE VARIAÇÕES ===== */
 const MODIFICADORES = [
   {emoji:"🎵",titulo:"Com música",desc:"Faça a mesma atividade com uma música de fundo. O ritmo muda totalmente a experiência."},
   {emoji:"🌳",titulo:"Ao ar livre",desc:"Leve a brincadeira para o pátio ou área externa. O novo ambiente desperta outras descobertas."},
@@ -625,31 +376,26 @@ const MODIFICADORES = [
   {emoji:"🪞",titulo:"De imitação",desc:"Você faz e a criança imita; depois inverta: você imita a criança. Cria vínculo e autonomia."},
   {emoji:"✋",titulo:"Versão sensorial",desc:"Acrescente uma textura nova para tocar (algodão, esponja, gel) durante a atividade."},
   {emoji:"📖",titulo:"Virando história",desc:"Crie uma historinha curta em volta da atividade ('hoje somos exploradores!')."},
-  {emoji:"🧺",titulo:"Só com o que tem",desc:"Adapte usando apenas o que já está na sala, sem preparar nada antes."},
+  {emoji:"🧺",titulo:"Só com o que tem",desc:"Adapte usando apenas o que já está na sala, sem preparar nada antes."}
 ];
-
 function surpreenda(){
   const lista = filtrar();
-  const res = document.getElementById("resultado");
-  res.dataset.modo="";
-  if(lista.length===0){ res.innerHTML = `<div class="vazio">😅 Sem atividades para esse filtro.</div>`; return; }
+  if(!lista.length){ estado={titulo:"😅 Sem atividades para esse filtro.",itens:[],modoFav:false}; render(); return; }
   const a = lista[Math.floor(Math.random()*lista.length)];
   const m = MODIFICADORES[Math.floor(Math.random()*MODIFICADORES.length)];
-  res.innerHTML = cardHTML(a, getFavs().includes(a.nome), m);
-  window.scrollTo({top:res.offsetTop-10,behavior:"smooth"});
+  estado = {titulo:"", modoFav:false, itens:[{a:a, variacao:m}]};
+  render();
 }
 
-/* ====== ATIVIDADE DO DIA (muda sozinha a cada dia) ====== */
+/* ===== ATIVIDADE DO DIA + AVISO DO MÊS ===== */
 function atividadeDoDia(){
   const pool = todasAtividades();
   const hoje = new Date();
   const dia = Math.floor((hoje - new Date(hoje.getFullYear(),0,0)) / 86400000);
   const a = pool[dia % pool.length];
-  const res = document.getElementById("resultado");
-  res.innerHTML = `<div class="dia-titulo">🌟 Atividade de hoje</div>` + cardHTML(a, getFavs().includes(a.nome));
+  estado = {titulo:"", modoFav:false, itens:[{a:a, titulo:"🌟 Atividade de hoje"}]};
+  render();
 }
-
-/* ====== AVISO DO MÊS (data comemorativa automática) ====== */
 function bannerSazonal(){
   const porMes = {1:"Carnaval",2:"Páscoa",3:"Dia dos Povos Indígenas",4:"Dia das Mães",5:"Festa Junina",7:"Folclore",8:"Primavera / Dia da Árvore",9:"Dia dos Animais",11:"Natal"};
   const data = porMes[new Date().getMonth()];
@@ -657,47 +403,45 @@ function bannerSazonal(){
   if(!data){ banner.innerHTML=""; return; }
   banner.innerHTML = `<div class="banner-sazonal" onclick="filtrarPorData('${data}')">🎉 Este mês tem <b>${data}</b>! Toque para ver as atividades temáticas.</div>`;
 }
-function filtrarPorData(d){
-  document.getElementById("fData").value = d;
-  document.getElementById("resultado").dataset.modo="";
-  gerar();
-}
+function filtrarPorData(d){ document.getElementById("fData").value = d; gerar(); }
 
-/* ====== FORMULÁRIO: NOVA ATIVIDADE ====== */
+/* ===== FORMULÁRIO NOVA ATIVIDADE ===== */
 function abrirForm(){ document.getElementById("overlay").classList.add("aberto"); }
 function fecharForm(){ document.getElementById("overlay").classList.remove("aberto"); }
 function linhas(id){ return document.getElementById(id).value.split("\n").map(s=>s.trim()).filter(Boolean); }
 function salvarNova(){
   const nome = document.getElementById("nNome").value.trim();
   if(!nome){ alert("Por favor, dê um nome para a atividade. 🙂"); return; }
-  const idadeSel = document.getElementById("nIdade").value;
+  const turma = document.getElementById("nTurma").value;
+  const fases = turma==="todas" ? ["bercario","creche1","creche2","creche3"] : [turma];
   const nova = {
     nome: nome,
     emoji: (document.getElementById("nEmoji").value.trim() || "🌟"),
     campo: document.getElementById("nCampo").value,
-    idades: idadeSel==="todas" ? [1,2,3] : [Number(idadeSel)],
+    fases: fases,
+    data: null,
     custo: document.getElementById("nCusto").value,
     bncc: (document.getElementById("nBncc").value.trim() || "Atividade criada por você para desenvolver a criança de forma lúdica."),
     materiais: linhas("nMat").length ? linhas("nMat") : ["Materiais simples do dia a dia"],
     passos: linhas("nPassos").length ? linhas("nPassos") : ["Conduza a brincadeira de forma livre e tranquila."],
-    tea: linhas("nTea").length ? linhas("nTea") : ["Faça individualmente, com calma, respeitando o tempo da criança."],
+    adapt: {
+      tea: linhas("nTea").length ? linhas("nTea") : ["Faça individualmente, com calma, respeitando o tempo da criança."],
+      tdah: linhas("nTdah").length ? linhas("nTdah") : ["Tarefa curta, com movimento e poucas distrações por perto."],
+      altas: linhas("nAltas").length ? linhas("nAltas") : ["Acrescente um desafio a mais e faça perguntas instigantes."]
+    },
     custom: true
   };
   const c = getCustom(); c.push(nova); setCustom(c);
-  ["nNome","nEmoji","nBncc","nMat","nPassos","nTea"].forEach(id=>document.getElementById(id).value="");
+  ["nNome","nEmoji","nBncc","nMat","nPassos","nTea","nTdah","nAltas"].forEach(id=>document.getElementById(id).value="");
   fecharForm();
-  const res = document.getElementById("resultado"); res.dataset.modo="";
-  res.innerHTML = `<div class="dia-titulo">✅ Atividade salva! Já entrou na sua biblioteca.</div>` + cardHTML(nova, false);
-  window.scrollTo({top:res.offsetTop-10,behavior:"smooth"});
+  estado = {titulo:"", modoFav:false, itens:[{a:nova, titulo:"✅ Atividade salva! Já entrou na sua biblioteca."}]};
+  render();
 }
 
-// limpa o modo "fav" ao gerar normalmente
-["fIdade","fCampo","fData"].forEach(id=>document.getElementById(id).addEventListener("change",()=>{
-  document.getElementById("resultado").dataset.modo="";
-}));
-document.querySelector(".b-gerar").addEventListener("click",()=>document.getElementById("resultado").dataset.modo="");
+/* ao trocar o perfil de adaptação, re-renderiza o que está na tela */
+document.getElementById("fPerfil").addEventListener("change", render);
 
-// ao abrir o app: mostra a atividade do dia e o aviso do mês (automático)
+/* ao abrir o app */
 bannerSazonal();
 atividadeDoDia();
 </script>
